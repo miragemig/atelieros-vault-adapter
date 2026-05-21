@@ -1,0 +1,31 @@
+{
+  "id": "memory-entity-deduplicator",
+  "title": "Memory Entity Deduplicator",
+  "model": "qwen2.5-coder:7b",
+  "provider": "ollama",
+  "mayGenerateCost": false,
+  "maxAttempts": 3,
+  "functionalTestCommand": "npx tsx founder-command-center\\validation\\functionalTestMemoryEntityDeduplicator.ts",
+  "context": "ZEUS detected duplicated/corrupted memory entities such as Moradia_Moradia_Boavista. Entity names use underscores as token separators. Preserve original casing where possible.",
+  "requirements": [
+    "Use inline exported functions only: export function normalizeEntityName(input: string): string",
+    "Use inline exported functions only: export function detectSuspiciousEntityName(input: string): boolean",
+    "Use inline exported functions only: export function deduplicateEntityNames(inputs: string[]): string[]",
+    "Do not use export { ... } at the bottom",
+    "Treat underscores as token separators",
+    "normalizeEntityName('Moradia_Moradia_Boavista') must return 'Moradia_Boavista'",
+    "detectSuspiciousEntityName('Moradia_Moradia_Boavista') must return true",
+    "detectSuspiciousEntityName('Moradia_Boavista') must return false",
+    "deduplicateEntityNames(['Moradia_Moradia_Boavista', 'Moradia_Boavista']) must return ['Moradia_Boavista']",
+    "Do not lowercase names unless explicitly required",
+    "Do not use console.log",
+    "Do not use filesystem access",
+    "Do not use external imports",
+    "Do not use markdown fences"
+  ],
+  "expectedExports": [
+    "export function normalizeEntityName",
+    "export function detectSuspiciousEntityName",
+    "export function deduplicateEntityNames"
+  ]
+}

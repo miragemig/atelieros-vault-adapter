@@ -1,0 +1,57 @@
+{
+  "system": "ZEUS",
+  "version": "0.2",
+  "updatedAt": "2026-05-21T22:11:44.867Z",
+  "mode": "DELIBERATION_ONLY",
+  "session": {
+    "mainSession": "miguel-primary",
+    "currentFocus": "memory-entity-deduplicator"
+  },
+  "git": {
+    "branch": "unknown",
+    "status": "clean",
+    "clean": true
+  },
+  "build": {
+    "currentTask": "memory-entity-deduplicator",
+    "latestReportStatus": "fail",
+    "latestReportPath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779311470542.json"
+  },
+  "hermes": {
+    "draftCount": 2,
+    "approvalCount": 25,
+    "sendGateCount": 22,
+    "outboxCount": 5
+  },
+  "runtime": {
+    "nodeVersion": "v24.15.0",
+    "pythonAvailable": true,
+    "tsxAvailable": true,
+    "uiHtmlAvailable": true,
+    "runtimeScriptsReady": true
+  },
+  "olympus": {
+    "activeClassical": [
+      "ZEUS",
+      "Hera",
+      "Poseidon",
+      "Demeter",
+      "Ares",
+      "Artemis",
+      "Aphrodite",
+      "Hephaestus",
+      "Hermes",
+      "Hestia",
+      "Athena",
+      "Apollo"
+    ]
+  },
+  "controlPlane": {
+    "gatewayStatePath": "E:\\ZEUS\\founder-command-center\\runtime\\zeus-gateway-state.json",
+    "eventJournalPath": "E:\\ZEUS\\founder-command-center\\runtime\\zeus-event-journal.jsonl",
+    "eventCount": 4,
+    "lastEventAt": "2026-05-21T22:11:40.504Z",
+    "latestDoctorReport": "E:\\ZEUS\\founder-command-center\\logs\\doctor\\doctor-report-1779401498657.json"
+  },
+  "nextRecommendedAction": "Rever o último report de build e corrigir a próxima falha verificável."
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AtelierOS Process",
+  "type": "object",
+  "required": ["id", "name", "client", "status", "priority", "createdAt", "updatedAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "client": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["em_curso", "bloqueado", "aguardar_cliente", "aguardar_camara", "aguardar_especialidade", "pronto_submissao", "concluido"]
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["baixa", "media", "alta", "critica"]
+    },
+    "currentPhase": { "type": "string" },
+    "nextAction": { "type": "string" },
+    "risks": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" }
+  }
+}

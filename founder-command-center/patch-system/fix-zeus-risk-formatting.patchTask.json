@@ -1,0 +1,20 @@
+{
+  "id": "fix-zeus-risk-formatting",
+  "title": "Fix ZEUS risk formatting",
+  "targetFiles": [
+    "founder-command-center/chat/zeusAdvisor.ts"
+  ],
+  "bugDescription": "Risk lines in ZEUS output appear visually concatenated.",
+  "expectedBehavior": "Each risk must appear on its own separate line in the Riscos / contraditório section.",
+  "reproductionCommand": "npx tsx founder-command-center/chat/zeusChatCli.ts \"Zeus, estou indeciso entre continuar o build system ou fazer a UI. Delibera.\"",
+  "validationCommand": "npx tsx founder-command-center/chat/zeusChatCli.ts \"Zeus, estou indeciso entre continuar o build system ou fazer a UI. Delibera.\"",
+  "forbiddenActions": [
+    "core_apply",
+    "git_commit",
+    "git_push",
+    "rewrite_full_file_without_review",
+    "touch_unlisted_files",
+    "paid_api_call"
+  ],
+  "approvalRequired": true
+}

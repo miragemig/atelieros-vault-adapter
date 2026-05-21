@@ -1,0 +1,40 @@
+{
+  "roadmapVersion": "0.3",
+  "currentPhase": "Governed Core",
+  "activeProject": "AtelierOS",
+  "phases": [
+    {
+      "id": "phase_001",
+      "name": "Foundation",
+      "status": "done",
+      "objective": "Protect the project and establish governed architecture.",
+      "tasks": [
+        { "id": "task_001", "title": "Git repository initialized", "status": "done", "priority": "critica" },
+        { "id": "task_002", "title": "Founder Command Center structure created", "status": "done", "priority": "critica" },
+        { "id": "task_003", "title": "Runtime state created", "status": "done", "priority": "alta" },
+        { "id": "task_004", "title": "Activity stream created", "status": "done", "priority": "alta" },
+        { "id": "task_005", "title": "Roadmap initialized", "status": "done", "priority": "alta" },
+        { "id": "task_006", "title": "Governance principles defined", "status": "done", "priority": "critica" },
+        { "id": "task_007", "title": "Commander Orchestrator created", "status": "done", "priority": "alta" }
+      ]
+    },
+    {
+      "id": "phase_002",
+      "name": "Governed Core",
+      "status": "active",
+      "objective": "Turn isolated scripts into a governed operational core.",
+      "tasks": [
+        { "id": "task_008", "title": "Create schema layer", "status": "done", "priority": "critica" },
+        { "id": "task_009", "title": "Create governance gates", "status": "done", "priority": "critica" },
+        { "id": "task_010", "title": "Create validation layer", "status": "done", "priority": "critica" },
+        { "id": "task_011", "title": "Create orchestrator", "status": "done", "priority": "alta" },
+        { "id": "task_012", "title": "Separate app-brain from founder-command-center", "status": "done", "priority": "alta" },
+        { "id": "task_013", "title": "Create memory governance rules", "status": "done", "priority": "critica" },
+        { "id": "task_014", "title": "Create support ingestion runtime", "status": "done", "priority": "alta" },
+        { "id": "task_015", "title": "Create runtime queue governance", "status": "done", "priority": "alta" },
+        { "id": "task_016", "title": "Create real inbox watcher", "status": "active", "priority": "critica" },
+        { "id": "task_017", "title": "Create Triage Agent", "status": "todo", "priority": "critica" }
+      ]
+    }
+  ]
+}

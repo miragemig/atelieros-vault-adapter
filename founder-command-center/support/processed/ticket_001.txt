@@ -1,0 +1,7 @@
+Gabinete: Demo Arquimla
+Tipo: Dúvida
+
+Não percebo porque o sistema marcou um email como crítico.
+Era apenas um pedido de informação simples sobre documentos necessários para licenciamento.
+
+Sugestão: gostava que a app explicasse melhor porque classificou cada email.

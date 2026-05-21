@@ -1,0 +1,25 @@
+{
+  "id": "1779398875303-open",
+  "createdAt": "2026-05-21T21:27:55.303Z",
+  "message": "--open",
+  "intent": "general_advice",
+  "severity": "medium",
+  "primaryWarning": "O principal risco é avançar sem clarificar a hipótese errada.",
+  "risks": [
+    "Misturar análise com execução tende a degradar disciplina operacional.",
+    "Criar nova frente antes de fechar a anterior aumenta dispersão.",
+    "A ausência de critério explícito mascara más decisões como impulso."
+  ],
+  "blockedAssumptions": [
+    "Que mais atividade significa mais progresso.",
+    "Que o primeiro caminho intuitivo é o mais rentável.",
+    "Que a pressão do momento substitui priorização."
+  ],
+  "pressureTest": "Se esta decisão falhar em 7 dias, qual foi a premissa que nunca chegou a ser validada?",
+  "safeNextStep": "Escolher uma única ação reversível, com output verificável, antes de abrir nova frente.",
+  "evidence": [
+    "Intent detetado: general_advice",
+    "Confiança do router: low",
+    "Último report em estado não verde: fail."
+  ]
+}

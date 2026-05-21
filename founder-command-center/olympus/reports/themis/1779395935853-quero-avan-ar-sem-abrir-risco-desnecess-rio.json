@@ -1,0 +1,19 @@
+{
+  "id": "1779395935853-quero-avan-ar-sem-abrir-risco-desnecess-rio",
+  "createdAt": "2026-05-21T20:38:55.853Z",
+  "message": "Quero avançar sem abrir risco desnecessário",
+  "intent": "security_review",
+  "governanceQuestion": "O que pode avançar já, o que exige aprovação explícita e o que deve ficar bloqueado nesta frente?",
+  "verdict": "approval_gated",
+  "allowedNow": [
+    "Preparar deliberação escrita [strategic_review:create_report]",
+    "Capturar nota de continuidade [operational_memory:write_memory_note]"
+  ],
+  "approvalGated": [
+    "Controlar browser externo [browser_control:browser_control]",
+    "Controlar o computador [computer_control:computer_control]"
+  ],
+  "blockedNow": [],
+  "criticalBoundary": "Nenhuma ação persistente ou externa deve avançar sem Miguel quando tocar ficheiros, contas, browser, computador ou envio.",
+  "recommendation": "Ficar dentro da zona permitida: preparar, analisar e produzir artefactos auditáveis antes de qualquer execução sensível."
+}

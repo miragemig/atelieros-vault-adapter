@@ -1,0 +1,19 @@
+{
+  "id": "1779395941842-quero-mexer-em-browser-e-superf-cie-externa",
+  "createdAt": "2026-05-21T20:39:01.842Z",
+  "message": "Quero mexer em browser e superfície externa",
+  "intent": "general_advice",
+  "surfaceQuestion": "Que superfícies externas ou instáveis estão envolvidas e como evitar perder controlo sobre elas?",
+  "unstableSurfaces": [
+    "browser e sessões autenticadas",
+    "serviços externos com estado próprio",
+    "fluxos que podem mudar fora do controlo do ZEUS"
+  ],
+  "permissionsBoundary": "Tudo o que toca browser, rede, contas ou sistemas externos deve ser tratado como approval-gated.",
+  "safeHandling": "Preparar primeiro o passo e só depois tocar a superfície externa com autorização explícita.",
+  "doNotDoNow": [
+    "abrir automação agressiva sobre browser",
+    "presumir estabilidade de UI externa",
+    "executar ações irreversíveis em serviços externos"
+  ]
+}

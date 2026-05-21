@@ -1,0 +1,29 @@
+{
+  "id": "1779395938934-onde-estamos-e-o-que-importa-lembrar",
+  "createdAt": "2026-05-21T20:38:58.941Z",
+  "message": "Onde estamos e o que importa lembrar?",
+  "intent": "status",
+  "continuityQuestion": "Que contexto já existe e deve ser recuperado antes de abrir nova interpretação ou nova frente?",
+  "knownState": [
+    "Git atual: clean",
+    "Última task conhecida: memory-entity-deduplicator",
+    "Último report: fail",
+    "Hermes estado atual: awaiting_voice_approval.",
+    "Último draft: altera-o-ao-pedido-inicial-1779361114062.draft.md.",
+    "Destinatário preparado: cliente@example.com."
+  ],
+  "latestArtifacts": [
+    "Proposal recente: 1779349905426-zeus-estou-indeciso-entre-continuar-o-build-system-ou-fazer-a-ui-delibera.md",
+    "Proposal recente: 1779349844520-zeus-estou-indeciso-entre-continuar-o-build-system-ou-fazer-a-ui-delibera.md",
+    "Proposal recente: 1779349625708-zeus-estou-indeciso-entre-continuar-o-build-system-ou-fazer-a-ui-delibera.md",
+    "Patch candidate recente: fix-zeus-risk-formatting-1779349625787"
+  ],
+  "recalledLessons": [
+    "Fix ZEUS Risk Formatting: tentativa anterior falhou e deve informar a próxima abordagem.",
+    "ZEUS Response Section Parser: tentativa anterior falhou e deve informar a próxima abordagem.",
+    "ZEUS Obsidian Sync Draft: tentativa anterior falhou e deve informar a próxima abordagem.",
+    "Valor sem continuidade perde-se entre decisões e tentativas.",
+    "A mesma falha tende a repetir-se quando o sistema não a transforma em memória explícita."
+  ],
+  "suggestedMemoryNote": "Intent: status | Mensagem: Onde estamos e o que importa lembrar? | Lição central: Valor sem continuidade perde-se entre decisões e tentativas. | Próximo contexto a recuperar: Que contexto já existe e deve ser recuperado antes de abrir nova interpretação ou nova frente?"
+}

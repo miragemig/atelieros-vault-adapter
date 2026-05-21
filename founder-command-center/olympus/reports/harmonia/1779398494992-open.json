@@ -1,0 +1,23 @@
+{
+  "id": "1779398494992-open",
+  "createdAt": "2026-05-21T21:21:34.992Z",
+  "message": "--open",
+  "intent": "general_advice",
+  "readiness": "medium",
+  "coherenceVerdict": "A resposta pode ser útil, mas precisa de garantir que decisão, risco e próxima ação aparecem sem se atropelarem.",
+  "strengths": [
+    "A intenção já está enquadrada.",
+    "Existe uma próxima ação plausível.",
+    "O pedido pode ser respondido sem execução prematura."
+  ],
+  "tensions": [
+    "A resposta pode misturar análise, decisão e execução em excesso.",
+    "Pode faltar uma hierarquia clara entre o essencial e o acessório."
+  ],
+  "missingPieces": [
+    "um critério claro de decisão",
+    "um contraditório explícito",
+    "uma recomendação curta e acionável"
+  ],
+  "releaseAdvice": "Entregar só quando a conclusão estiver clara, a ação segura for inequívoca e o resto tiver sido comprimido."
+}

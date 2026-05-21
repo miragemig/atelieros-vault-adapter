@@ -1,0 +1,28 @@
+{
+  "id": "1779396805699-open",
+  "createdAt": "2026-05-21T20:53:25.700Z",
+  "message": "--open",
+  "intent": "general_advice",
+  "designQuestion": "Qual é a menor estrutura de sistema que torna o fluxo mais utilizável sem aumentar demasiado a complexidade?",
+  "userSurface": [
+    "um ponto de entrada simples",
+    "um estado visível",
+    "um comando ou ação principal"
+  ],
+  "systemBlocks": [
+    "router",
+    "estado operacional",
+    "saída verificável"
+  ],
+  "primaryFlow": [
+    "receber pedido",
+    "interpretar",
+    "mostrar próxima ação segura"
+  ],
+  "constraints": [
+    "não abrir mais superfícies do que o motor consegue suportar",
+    "não separar UX da realidade operacional",
+    "não criar fachada sem utilidade"
+  ],
+  "prototypeAdvice": "Desenhar só a menor superfície que torne o fluxo utilizável e compreensível."
+}

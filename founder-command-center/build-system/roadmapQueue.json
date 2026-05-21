@@ -1,0 +1,87 @@
+{
+  "mode": "OVERNIGHT_SAFE_MODE",
+  "tasks": [
+    {
+      "id": "fix-zeus-risk-formatting",
+      "title": "Fix ZEUS Risk Formatting",
+      "status": "queued",
+      "priority": 1,
+      "buildTask": {
+        "id": "fix-zeus-risk-formatting",
+        "title": "Fix ZEUS Risk Formatting",
+        "model": "qwen2.5-coder:7b",
+        "provider": "ollama",
+        "mayGenerateCost": false,
+        "maxAttempts": 3,
+        "requirements": [
+          "fix risk list formatting in ZEUS advisor output",
+          "ensure each risk appears on its own line",
+          "preserve DELIBERATION_ONLY mode",
+          "do not change project creation behavior"
+        ]
+      }
+    },
+    {
+      "id": "zeus-response-section-parser",
+      "title": "ZEUS Response Section Parser",
+      "status": "queued",
+      "priority": 2,
+      "buildTask": {
+        "id": "zeus-response-section-parser",
+        "title": "ZEUS Response Section Parser",
+        "model": "qwen2.5-coder:7b",
+        "provider": "ollama",
+        "mayGenerateCost": false,
+        "maxAttempts": 3,
+        "requirements": [
+          "create parser for ZEUS response sections",
+          "extract Questao a decidir, Opcoes, Riscos, Recomendacao, Modo atual",
+          "no filesystem writes",
+          "no external dependencies",
+          "include inline examples"
+        ]
+      }
+    },
+    {
+      "id": "zeus-obsidian-sync-draft",
+      "title": "ZEUS Obsidian Sync Draft",
+      "status": "queued",
+      "priority": 3,
+      "buildTask": {
+        "id": "zeus-obsidian-sync-draft",
+        "title": "ZEUS Obsidian Sync Draft",
+        "model": "qwen2.5-coder:7b",
+        "provider": "ollama",
+        "mayGenerateCost": false,
+        "maxAttempts": 3,
+        "requirements": [
+          "draft a safe ZEUS to Obsidian sync module",
+          "summarize status, reports and decisions",
+          "write no files in generated module",
+          "no external dependencies",
+          "include safety notes"
+        ]
+      }
+    },
+    {
+      "id": "zeus-morning-report-draft",
+      "title": "ZEUS Morning Report Draft",
+      "status": "queued",
+      "priority": 4,
+      "buildTask": {
+        "id": "zeus-morning-report-draft",
+        "title": "ZEUS Morning Report Draft",
+        "model": "qwen2.5-coder:7b",
+        "provider": "ollama",
+        "mayGenerateCost": false,
+        "maxAttempts": 3,
+        "requirements": [
+          "create a module that formats overnight results into a morning report",
+          "summarize passed builds, failed builds, candidates and risks",
+          "no filesystem writes",
+          "no external dependencies"
+        ]
+      }
+    }
+  ]
+}

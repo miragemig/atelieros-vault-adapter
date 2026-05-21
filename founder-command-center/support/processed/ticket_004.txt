@@ -1,0 +1,6 @@
+Gabinete: Demo Arquitectura
+Tipo: Bug
+
+O sistema criou duas entidades iguais para o mesmo cliente.
+
+Parece haver duplicação de memória.

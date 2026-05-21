@@ -1,0 +1,25 @@
+{
+  "id": "1779395944702-vale-a-pena-continuar-a-investir-tempo-nesta-frente",
+  "createdAt": "2026-05-21T20:39:04.702Z",
+  "message": "Vale a pena continuar a investir tempo nesta frente?",
+  "intent": "finance_analysis",
+  "economicQuestion": "Que decisão preserva caixa, reduz downside e mantém opcionalidade suficiente para corrigir curso?",
+  "upside": [
+    "proteção de liquidez",
+    "capacidade de testar antes de escalar",
+    "menor risco de compromisso rígido"
+  ],
+  "downside": [
+    "decisão demasiado lenta pode perder janela útil",
+    "prudência excessiva pode adiar prova necessária",
+    "subinvestimento pode limitar retorno"
+  ],
+  "costDrivers": [
+    "caixa comprometida",
+    "tempo até retorno",
+    "custo de oportunidade"
+  ],
+  "optionality": "Opcionalidade vale mais quando a informação ainda é incompleta e o erro pode ser caro.",
+  "recommendation": "Favorecer passos pequenos e reversíveis até existir prova melhor sobre retorno e risco.",
+  "disclaimer": "Isto é raciocínio económico-operacional, não aconselhamento financeiro regulado."
+}

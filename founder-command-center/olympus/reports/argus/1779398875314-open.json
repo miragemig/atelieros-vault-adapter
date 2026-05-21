@@ -1,0 +1,25 @@
+{
+  "id": "1779398875314-open",
+  "createdAt": "2026-05-21T21:27:55.314Z",
+  "message": "--open",
+  "intent": "general_advice",
+  "watchQuestion": "Que observação externa ajudaria a decidir melhor sem criar ruído nem abrir uma frente de monitorização excessiva?",
+  "watchTargets": [
+    "fontes públicas de referência",
+    "ferramentas comparáveis",
+    "mudanças relevantes no ecossistema"
+  ],
+  "signalTypes": [
+    "alterações de produto",
+    "mudanças de workflow",
+    "novos padrões úteis"
+  ],
+  "cadence": "manual ou semanal, nunca contínua por defeito",
+  "guardrails": [
+    "só fontes públicas",
+    "sem túneis públicos",
+    "sem APIs pagas",
+    "sem watchers ruidosos sem aprovação"
+  ],
+  "firstSafeWatch": "Criar um watch pequeno, manual e com poucos alvos antes de automatizar qualquer recolha."
+}

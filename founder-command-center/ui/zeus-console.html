@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <title>ZEUS Command Chamber</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #050712;
+      --panel: rgba(15, 23, 42, 0.72);
+      --panel-strong: rgba(17, 24, 39, 0.92);
+      --line: rgba(148, 163, 184, 0.16);
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --soft: #cbd5e1;
+      --violet: #7c3aed;
+      --violet-2: #a78bfa;
+      --cyan: #22d3ee;
+      --green: #22c55e;
+      --amber: #f59e0b;
+      --danger: #fb7185;
+      --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(124, 58, 237, 0.22), transparent 32%),
+        radial-gradient(circle at 78% 14%, rgba(34, 211, 238, 0.14), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(124, 58, 237, 0.16), transparent 36%),
+        var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(circle at center, black, transparent 80%);
+    }
+
+    .shell {
+      width: min(1320px, calc(100vw - 48px));
+      margin: 0 auto;
+      padding: 36px 0 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 26px;
+    }
+
+    .brand {
+      padding-top: 6px;
+    }
+
+    .kicker {
+      color: var(--violet-2);
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(44px, 7vw, 88px);
+      line-height: 0.9;
+      letter-spacing: 0.08em;
+      font-weight: 900;
+      text-shadow: 0 0 34px rgba(124, 58, 237, 0.35);
+    }
+
+    .subtitle {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 15px;
+      letter-spacing: 0.02em;
+    }
+
+    .status-card {
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.62));
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .mode-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ddd6fe;
+      background: rgba(124, 58, 237, 0.24);
+      border: 1px solid rgba(167, 139, 250, 0.32);
+      margin-bottom: 14px;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 18px rgba(34, 211, 238, 0.9);
+      animation: pulse 1.9s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.55; transform: scale(0.85); }
+      50% { opacity: 1; transform: scale(1.25); }
+    }
+
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 9px 0;
+      border-top: 1px solid rgba(148, 163, 184, 0.10);
+      font-size: 13px;
+    }
+
+    .status-row:first-of-type {
+      border-top: 0;
+    }
+
+    .status-label {
+      color: var(--muted);
+    }
+
+    .status-value {
+      color: var(--soft);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      text-align: right;
+      max-width: 180px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .command-grid {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .main-panel,
+    .side-panel {
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.78), rgba(2, 6, 23, 0.74));
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(20px);
+    }
+
+    .main-panel {
+      padding: 22px;
+      min-height: 620px;
+    }
+
+    .side-panel {
+      padding: 20px;
+    }
+
+    .panel-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .panel-title h2 {
+      margin: 0;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #dbeafe;
+    }
+
+    .panel-title span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .oracle {
+      position: relative;
+      height: 145px;
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      border-radius: 22px;
+      margin-bottom: 18px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.38), transparent 24%),
+        radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.16), transparent 42%),
+        rgba(2, 6, 23, 0.7);
+    }
+
+    .oracle::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(167, 139, 250, 0.24);
+      box-shadow: 0 0 54px rgba(124, 58, 237, 0.24);
+      animation: rotateGlow 8s linear infinite;
+    }
+
+    .oracle::after {
+      content: "ΟΛΥΜΠΟΣ";
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: rgba(226, 232, 240, 0.8);
+      letter-spacing: 0.32em;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    @keyframes rotateGlow {
+      from { transform: rotate(0deg) scale(1); }
+      to { transform: rotate(360deg) scale(1.02); }
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 128px;
+      resize: vertical;
+      border-radius: 20px;
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      outline: none;
+      padding: 18px;
+      color: #f8fafc;
+      background: rgba(2, 6, 23, 0.78);
+      font-size: 15px;
+      line-height: 1.5;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+    }
+
+    textarea:focus {
+      border-color: rgba(167, 139, 250, 0.72);
+      box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.16);
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 14px 0 18px;
+    }
+
+    .hint {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    button {
+      border: 0;
+      border-radius: 999px;
+      padding: 13px 20px;
+      color: white;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      background:
+        linear-gradient(135deg, #7c3aed, #4f46e5 48%, #06b6d4);
+      box-shadow: 0 16px 36px rgba(79, 70, 229, 0.34);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 44px rgba(79, 70, 229, 0.44);
+    }
+
+    button:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .response {
+      min-height: 270px;
+      border-radius: 22px;
+      border: 1px solid rgba(148, 163, 184, 0.14);
+      background: rgba(2, 6, 23, 0.82);
+      padding: 20px;
+      white-space: pre-wrap;
+      line-height: 1.52;
+      font-size: 14px;
+      color: #e2e8f0;
+      overflow: auto;
+      max-height: 520px;
+    }
+
+    .response.thinking {
+      color: #c4b5fd;
+    }
+
+    .mini-section {
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+    }
+
+    .mini-section:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .mini-section h3 {
+      margin: 0 0 10px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #c4b5fd;
+    }
+
+    .mini-section p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .agent-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .agent {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 11px;
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.58);
+      border: 1px solid rgba(148, 163, 184, 0.10);
+      font-size: 12px;
+    }
+
+    .agent strong {
+      color: #f8fafc;
+    }
+
+    .agent span {
+      color: var(--muted);
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      color: rgba(148, 163, 184, 0.72);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      .topbar,
+      .command-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .status-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="topbar">
+      <div class="brand">
+        <div class="kicker">Sistema Privado</div>
+        <h1>ZEUS</h1>
+        <div class="subtitle">Deliberação · Olympus · Execução bloqueada</div>
+      </div>
+
+      <aside class="status-card">
+        <div class="mode-pill"><span class="pulse-dot"></span><span id="mode">loading</span></div>
+        <div class="status-row">
+          <span class="status-label">Git</span>
+          <span class="status-value" id="gitStatus">...</span>
+        </div>
+        <div class="status-row">
+          <span class="status-label">Núcleo ativo</span>
+          <span class="status-value" id="currentTask">...</span>
+        </div>
+        <div class="status-row">
+          <span class="status-label">Última validação</span>
+          <span class="status-value" id="latestReport">...</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="command-grid">
+      <section class="main-panel">
+        <div class="panel-title">
+          <h2>Câmara de Deliberação</h2>
+          <span>Escreve o objetivo. ZEUS pesa opções, riscos e próxima ação.</span>
+        </div>
+
+        <div class="oracle"></div>
+
+        <textarea id="message">Zeus, estou indeciso entre continuar o build system ou fazer a UI. Delibera.</textarea>
+
+        <div class="actions">
+          <div class="hint">Modo: deliberação. Nada é executado sem ordem explícita.</div>
+          <button id="sendButton">Deliberar</button>
+        </div>
+
+        <div class="response" id="response">À espera da próxima questão.</div>
+      </section>
+
+      <aside class="side-panel">
+        <div class="mini-section">
+          <h3>Princípio</h3>
+          <p>ZEUS não age por impulso. Primeiro interpreta, convoca Olympus, pesa risco e só depois propõe.</p>
+        </div>
+
+        <div class="mini-section">
+          <h3>Olympus</h3>
+          <div class="agent-list">
+            <div class="agent"><strong>Athena</strong><span>Estratégia</span></div>
+            <div class="agent"><strong>Ares</strong><span>Risco</span></div>
+            <div class="agent"><strong>Hera</strong><span>Governação</span></div>
+            <div class="agent"><strong>Hestia</strong><span>Memória</span></div>
+            <div class="agent"><strong>Hephaestus</strong><span>Build</span></div>
+            <div class="agent"><strong>Aphrodite</strong><span>Experiência</span></div>
+          </div>
+        </div>
+
+        <div class="mini-section">
+          <h3>Próxima evolução</h3>
+          <p>Ligar o Ollama ao Advisor sem quebrar a governação de Hera nem a disciplina do ZEUS.</p>
+        </div>
+      </aside>
+    </section>
+
+    <div class="footer-note">ZEUS v0.2 · local-first · zero-cost · governed by Miguel</div>
+  </main>
+
+  <script>
+    async function loadStatus() {
+      const res = await fetch("/api/status");
+      const data = await res.json();
+
+      document.getElementById("mode").textContent = data.mode;
+      document.getElementById("gitStatus").textContent = data.gitStatus;
+      document.getElementById("currentTask").textContent = data.currentTask;
+      document.getElementById("latestReport").textContent = data.latestReportStatus;
+    }
+
+    async function sendMessage() {
+      const button = document.getElementById("sendButton");
+      const responseBox = document.getElementById("response");
+      const message = document.getElementById("message").value;
+
+      button.disabled = true;
+      responseBox.classList.add("thinking");
+      responseBox.textContent = "ZEUS está a deliberar...";
+
+      try {
+        const res = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message })
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          responseBox.textContent = data.error || "Erro desconhecido.";
+        } else {
+          responseBox.textContent = data.response;
+        }
+      } catch (error) {
+        responseBox.textContent = String(error);
+      } finally {
+        responseBox.classList.remove("thinking");
+        button.disabled = false;
+        loadStatus();
+      }
+    }
+
+    document.getElementById("sendButton").addEventListener("click", sendMessage);
+    loadStatus();
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,7 @@
+--- founder-command-center/chat/zeusAdvisor.ts
++++ founder-command-center/chat/zeusAdvisor.ts
+
+-   const risks = risksFor(routed.intent, context.gitStatus).map((item) => `- ${item}`).join("\n");
++   const risks = risksFor(routed.intent, context.gitStatus)
++     .map((item) => `- ${item}`)
++     .join("\n");

@@ -1,0 +1,21 @@
+{
+  "id": "1779397033920-open",
+  "createdAt": "2026-05-21T20:57:13.920Z",
+  "message": "--open",
+  "intent": "general_advice",
+  "narrativeQuestion": "Qual é a mensagem mais útil e mais clara para esta frente, sem inflacionar promessas?",
+  "corePromise": "Clareza operacional, controlo e execução útil sem excesso de complexidade.",
+  "audience": "Miguel ou um utilizador próximo do problema real.",
+  "proofPoints": [
+    "fluxo funcional já existente",
+    "gates claros",
+    "saída verificável"
+  ],
+  "callToAction": "Avançar para um próximo passo concreto e reversível.",
+  "toneAdvice": "Direto, sóbrio, técnico e sem espetáculo.",
+  "doNotSay": [
+    "promessas de automação total",
+    "linguagem grandiosa sem prova",
+    "benefícios vagos sem mecanismo claro"
+  ]
+}

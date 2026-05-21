@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AtelierOS Action",
+  "type": "object",
+  "required": ["id", "title", "type", "priority", "status", "requiresHumanApproval", "createdAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "type": {
+      "type": "string",
+      "enum": ["validar", "responder", "arquivar", "criar_draft", "rever", "submeter", "investigar", "corrigir"]
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["baixa", "media", "alta", "critica"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["suggested", "approved", "rejected", "in_progress", "done", "blocked"]
+    },
+    "project": { "type": "string" },
+    "process": { "type": "string" },
+    "source": { "type": "string" },
+    "requiresHumanApproval": { "type": "boolean" },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" }
+  }
+}

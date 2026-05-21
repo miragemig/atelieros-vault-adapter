@@ -1,0 +1,34 @@
+{
+  "id": "1779398875591-open",
+  "createdAt": "2026-05-21T21:27:55.592Z",
+  "message": "--open",
+  "intent": "general_advice",
+  "strategicQuestion": "Qual é a melhor forma de avançar sem perder foco, margem de aprendizagem e controlo?",
+  "criteria": [
+    "valor operacional em curto prazo",
+    "reversibilidade da decisão",
+    "esforço total vs. feedback real"
+  ],
+  "optionsFrame": [
+    "consolidar o que já existe",
+    "abrir nova frente limitada",
+    "adiar o resto até existir critério melhor"
+  ],
+  "tradeoff": "Mais ambição agora aumenta superfície, mas nem sempre aumenta prova real de progresso.",
+  "sequence": [
+    "fechar a frente atual",
+    "validar com teste real",
+    "só depois abrir a próxima peça"
+  ],
+  "notNow": [
+    "novas abstrações amplas",
+    "mais superfície visual sem motor",
+    "frentes paralelas sem critério"
+  ],
+  "recommendation": "Escolher a próxima ação pela combinação de utilidade imediata, baixo risco e facilidade de validação.",
+  "evidence": [
+    "Intent detetado: general_advice",
+    "Confiança do router: low",
+    "Último report conhecido: fail."
+  ]
+}
