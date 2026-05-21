@@ -76,6 +76,30 @@ function safeExec(command: string): string {
   }
 }
 
+function normalizePath(value: string): string {
+  return value.replace(/\\/g, "/").trim();
+}
+
+function relevantGitStatus(rawStatus: string): string {
+  const ignoredPrefixes = [
+    "founder-command-center/runtime/zeus-event-journal.jsonl",
+    "founder-command-center/runtime/zeus-gateway-state.json",
+    "founder-command-center/runtime/overnight/",
+    "founder-command-center/logs/doctor/"
+  ];
+
+  return rawStatus
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .filter((line) => {
+      const normalizedLine = normalizePath(line);
+      const pathPart = normalizedLine.slice(3).trim();
+      return !ignoredPrefixes.some((prefix) => pathPart.startsWith(prefix));
+    })
+    .join("\n");
+}
+
 function execStep(command: string) {
   return execSync(command, {
     cwd: root,
@@ -207,19 +231,21 @@ function main() {
     }
   };
 
-  appendEvent({
-    source: "overnight-self-build",
-    type: "overnight_started",
-    summary: "ZEUS overnight self-build started.",
-    data: { hours, intervalMinutes, logFile }
-  });
-
   writeLogLine(logFile, "ZEUS overnight self-build started.");
   writeLogLine(logFile, `End time: ${endAt.toISOString()}`);
   writeLogLine(logFile, `Interval minutes: ${intervalMinutes}`);
   writeLogLine(logFile, "Mode: OVERNIGHT_SAFE_MODE");
 
-  const initialGitStatus = safeExec("git status --short") || "clean";
+  const rawInitialGitStatus = safeExec("git status --short");
+  const initialGitStatus = relevantGitStatus(rawInitialGitStatus) || "clean";
+
+  appendEvent({
+    source: "overnight-self-build",
+    type: "overnight_started",
+    summary: "ZEUS overnight self-build started.",
+    data: { hours, intervalMinutes, logFile, initialGitStatus }
+  });
+
   if (initialGitStatus !== "clean") {
     writeLogLine(logFile, "Initial git state is not clean. Overnight autonomy will not override pre-existing changes.");
     writeLogLine(logFile, initialGitStatus);

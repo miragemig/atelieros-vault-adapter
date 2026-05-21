@@ -1,7 +1,7 @@
 {
   "system": "ZEUS",
   "version": "0.2",
-  "updatedAt": "2026-05-21T22:20:19.529Z",
+  "updatedAt": "2026-05-21T22:23:17.367Z",
   "mode": "DELIBERATION_ONLY",
   "session": {
     "mainSession": "miguel-primary",
@@ -49,9 +49,9 @@
   "controlPlane": {
     "gatewayStatePath": "E:\\ZEUS\\founder-command-center\\runtime\\zeus-gateway-state.json",
     "eventJournalPath": "E:\\ZEUS\\founder-command-center\\runtime\\zeus-event-journal.jsonl",
-    "eventCount": 10,
-    "lastEventAt": "2026-05-21T22:20:15.000Z",
-    "latestDoctorReport": "E:\\ZEUS\\founder-command-center\\logs\\doctor\\doctor-report-1779402013005.json"
+    "eventCount": 16,
+    "lastEventAt": "2026-05-21T22:23:12.965Z",
+    "latestDoctorReport": "E:\\ZEUS\\founder-command-center\\logs\\doctor\\doctor-report-1779402191008.json"
   },
   "nextRecommendedAction": "Rever alterações locais antes de executar ações adicionais."
 }
