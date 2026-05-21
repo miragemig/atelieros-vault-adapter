@@ -35,10 +35,10 @@ function scheduleProcess(filePath: string) {
 
     try {
       execSync(
-        `npx tsx founder-command-center\\agents\\supportAgent.ts "${filePath}"`,
+        `npx tsx founder-command-center/agents/supportAgent.ts "${filePath}"`,
         {
           stdio: "inherit",
-          shell: "powershell.exe"
+          shell: process.platform === "win32" ? "powershell.exe" : "/bin/sh"
         }
       );
 

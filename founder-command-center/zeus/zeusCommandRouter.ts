@@ -15,7 +15,7 @@ function run(command: string): void {
   execSync(command, {
     cwd: root,
     stdio: "inherit",
-    shell: "powershell.exe"
+    shell: process.platform === "win32" ? "powershell.exe" : "/bin/sh"
   });
 }
 

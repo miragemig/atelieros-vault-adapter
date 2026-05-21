@@ -22,7 +22,7 @@ function parseApprovedBy(args: string[]): string | null {
 function runTs(script: string): { code: number; output: string } {
   try {
     const output = execFileSync(
-      ".\\node_modules\\.bin\\tsx.cmd",
+      ".\\node_modules/.bin/tsx.cmd",
       [script],
       {
         cwd: root,
@@ -82,14 +82,14 @@ async function main() {
     reasons.push("ZEUS_ALLOW_BROWSER_SEND_CLICK is not true.");
   }
 
-  const readiness = runTs("founder-command-center\\hermes\\hermesSendReadiness.ts");
+  const readiness = runTs("founder-command-center/hermes\\hermesSendReadiness.ts");
 
   if (readiness.code !== 0) {
     reasons.push("Send readiness failed.");
     if (readiness.output) reasons.push(readiness.output);
   }
 
-  const gate = runTs("founder-command-center\\hermes\\hermesBrowserSendGate.ts");
+  const gate = runTs("founder-command-center/hermes\\hermesBrowserSendGate.ts");
 
   if (gate.code !== 0) {
     reasons.push("Browser send gate failed.");

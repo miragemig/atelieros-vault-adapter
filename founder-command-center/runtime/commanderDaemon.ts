@@ -32,7 +32,7 @@ function runCommanderCycle() {
       "npx tsx founder-command-center\\agents\\commanderOrchestrator.ts",
       {
         stdio: "inherit",
-        shell: "powershell.exe"
+        shell: process.platform === "win32" ? "powershell.exe" : "/bin/sh"
       }
     );
 

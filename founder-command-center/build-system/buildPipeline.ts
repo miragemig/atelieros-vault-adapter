@@ -144,7 +144,7 @@ function runValidation(report: BuildReport, label: string, task: BuildTask): boo
   report.steps.push(
     runCommand(
       label,
-      "npx tsx founder-command-center\\validation\\validateLatestQuarantineDraft.ts",
+      "npx tsx founder-command-center/validation/validateLatestQuarantineDraft.ts",
       report.timeoutMs
     )
   );
@@ -207,7 +207,7 @@ function runBuildPipeline() {
   report.steps.push(
     runCommand(
       "generate",
-      "npx tsx founder-command-center\\agents\\ollamaBuildWorker.ts",
+      "npx tsx founder-command-center/agents/ollamaBuildWorker.ts",
       timeoutMs
     )
   );
@@ -225,7 +225,7 @@ function runBuildPipeline() {
     report.steps.push(
       runCommand(
         "repair-semantic",
-        "npx tsx founder-command-center\\agents\\ollamaRepairWorker.ts",
+        "npx tsx founder-command-center/agents/ollamaRepairWorker.ts",
         timeoutMs
       )
     );
@@ -239,7 +239,7 @@ function runBuildPipeline() {
     report.steps.push(
       runCommand(
         "repair-typescript",
-        "npx tsx founder-command-center\\agents\\ollamaTypeScriptRepairWorker.ts",
+        "npx tsx founder-command-center/agents/ollamaTypeScriptRepairWorker.ts",
         timeoutMs
       )
     );

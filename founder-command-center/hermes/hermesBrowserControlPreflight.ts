@@ -70,7 +70,7 @@ function main() {
   }
 
   const readiness = safeExec(
-    ".\\node_modules\\.bin\\tsx.cmd founder-command-center\\hermes\\hermesSendReadiness.ts"
+    ".\\node_modules/.bin/tsx.cmd founder-command-center\\hermes\\hermesSendReadiness.ts"
   );
 
   if (readiness.code === 0) {

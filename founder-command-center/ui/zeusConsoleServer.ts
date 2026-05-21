@@ -106,7 +106,7 @@ server.listen(port, () => {
   console.log(`ZEUS Console running at ${url}`);
 
   if (shouldOpenBrowser) {
-    exec(`start "" "${url}"`, { shell: "powershell.exe" }, () => {
+    exec(`start "" "${url}"`, { shell: process.platform === "win32" ? "powershell.exe" : "/bin/sh" }, () => {
       // Browser auto-open is convenience only. The server should keep running either way.
     });
   }

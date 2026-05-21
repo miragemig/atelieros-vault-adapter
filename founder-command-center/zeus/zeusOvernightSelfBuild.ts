@@ -183,7 +183,7 @@ function runDoctorOnce(logFile: string) {
   writeLogLine(logFile, "Running ZEUS doctor before overnight loop.");
   try {
     const output = execStep(
-      "npx tsx founder-command-center\\zeus\\zeusDoctor.ts"
+      "npx tsx founder-command-center/zeus/zeusDoctor.ts"
     );
     if (output) writeLogLine(logFile, output);
   } catch (error: any) {
@@ -277,7 +277,7 @@ function main() {
       try {
         writeLogLine(logFile, "Selecting next roadmap task.");
         const selectOutput = execStep(
-          "npx tsx founder-command-center\\build-system\\selectNextRoadmapTask.ts"
+          "npx tsx founder-command-center/build-system/selectNextRoadmapTask.ts"
         );
         if (selectOutput) writeLogLine(logFile, selectOutput);
 
@@ -304,12 +304,12 @@ function main() {
 
           try {
             const pipelineOutput = execStep(
-              "npx tsx founder-command-center\\build-system\\buildPipeline.ts"
+              "npx tsx founder-command-center/build-system/buildPipeline.ts"
             );
             if (pipelineOutput) writeLogLine(logFile, pipelineOutput);
 
             execStep(
-              `npx tsx founder-command-center\\build-system\\createApprovalCandidate.ts`
+              `npx tsx founder-command-center/build-system/createApprovalCandidate.ts`
             );
 
             const latestCandidate = latestCandidateMetadata();
@@ -329,13 +329,13 @@ function main() {
               candidateMetadata.coreDestinationPath || defaultCoreDestination(candidateId);
 
             execStep(
-              `npx tsx founder-command-center\\build-system\\approveCandidate.ts ${candidateId} --autonomous`
+              `npx tsx founder-command-center/build-system/approveCandidate.ts ${candidateId} --autonomous`
             );
             execStep(
-              `npx tsx founder-command-center\\build-system\\applyApprovedCandidateToCore.ts ${candidateId} "${destinationPath}" --apply --autonomous`
+              `npx tsx founder-command-center/build-system/applyApprovedCandidateToCore.ts ${candidateId} "${destinationPath}" --apply --autonomous`
             );
             execStep(
-              `npx tsx founder-command-center\\build-system\\markRoadmapTask.ts ${selectedTaskId} waiting_morning_review`
+              `npx tsx founder-command-center/build-system/markRoadmapTask.ts ${selectedTaskId} waiting_morning_review`
             );
 
             outcome = "build_applied_autonomously";
@@ -365,7 +365,7 @@ function main() {
 
             try {
               execStep(
-                `npx tsx founder-command-center\\build-system\\markRoadmapTask.ts ${selectedTaskId} failed`
+                `npx tsx founder-command-center/build-system/markRoadmapTask.ts ${selectedTaskId} failed`
               );
             } catch {
               writeLogLine(logFile, `Unable to mark task as failed: ${selectedTaskId}`);
@@ -393,7 +393,7 @@ function main() {
 
     try {
       const approvalOutput = execStep(
-        "npx tsx founder-command-center\\agents\\approvalGate.ts"
+        "npx tsx founder-command-center/agents/approvalGate.ts"
       );
       if (approvalOutput) writeLogLine(logFile, approvalOutput);
     } catch (error: any) {

@@ -16,7 +16,7 @@ type GateLog = {
 function runTs(script: string): { code: number; output: string } {
   try {
     const output = execFileSync(
-      ".\\node_modules\\.bin\\tsx.cmd",
+      ".\\node_modules/.bin/tsx.cmd",
       [script],
       {
         cwd: root,
@@ -38,7 +38,7 @@ function runTs(script: string): { code: number; output: string } {
 }
 
 function main() {
-  const readiness = runTs("founder-command-center\\hermes\\hermesSendReadiness.ts");
+  const readiness = runTs("founder-command-center/hermes\\hermesSendReadiness.ts");
 
   const reasons: string[] = [];
 

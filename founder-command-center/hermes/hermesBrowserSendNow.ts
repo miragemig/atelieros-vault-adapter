@@ -56,7 +56,7 @@ function main() {
   }
 
   const readiness = safeExec(
-    ".\\node_modules\\.bin\\tsx.cmd founder-command-center\\hermes\\hermesSendReadiness.ts"
+    ".\\node_modules/.bin/tsx.cmd founder-command-center\\hermes\\hermesSendReadiness.ts"
   );
 
   if (readiness.code !== 0) {
@@ -65,7 +65,7 @@ function main() {
   }
 
   const gate = safeExec(
-    ".\\node_modules\\.bin\\tsx.cmd founder-command-center\\hermes\\hermesBrowserSendGate.ts"
+    ".\\node_modules/.bin/tsx.cmd founder-command-center\\hermes\\hermesBrowserSendGate.ts"
   );
 
   if (gate.code !== 0) {
