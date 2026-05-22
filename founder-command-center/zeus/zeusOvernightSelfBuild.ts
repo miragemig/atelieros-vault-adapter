@@ -85,7 +85,18 @@ function relevantGitStatus(rawStatus: string): string {
     "founder-command-center/runtime/zeus-event-journal.jsonl",
     "founder-command-center/runtime/zeus-gateway-state.json",
     "founder-command-center/runtime/overnight/",
+    "founder-command-center/runtime/morning/",
     "founder-command-center/logs/doctor/"
+  ];
+
+  const ignoredPatterns = [
+    /\.zip$/,
+    /\.log$/,
+    /overnight-test/,
+    /^fix$/,
+    /^fixDaemon\.ts$/,
+    /^fixHermes\.ts$/,
+    /^fixWindowsDependencies\.ts$/
   ];
 
   return rawStatus
@@ -93,9 +104,25 @@ function relevantGitStatus(rawStatus: string): string {
     .map((line) => line.trim())
     .filter(Boolean)
     .filter((line) => {
+      // Ignore untracked files (starts with ??)
+      if (line.startsWith("??")) {
+        return false;
+      }
+
       const normalizedLine = normalizePath(line);
       const pathPart = normalizedLine.slice(3).trim();
-      return !ignoredPrefixes.some((prefix) => pathPart.startsWith(prefix));
+
+      // Check ignored prefixes
+      if (ignoredPrefixes.some((prefix) => pathPart.startsWith(prefix))) {
+        return false;
+      }
+
+      // Check ignored patterns
+      if (ignoredPatterns.some((pattern) => pattern.test(pathPart))) {
+        return false;
+      }
+
+      return true;
     })
     .join("\n");
 }
