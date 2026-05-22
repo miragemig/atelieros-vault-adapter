@@ -7,12 +7,12 @@ const root = process.cwd();
 const runtimeDir = path.join(root, "founder-command-center", "runtime");
 const overnightDir = path.join(runtimeDir, "overnight");
 const overnightReportsDir = path.join(overnightDir, "reports");
-const buildTaskPath = path.join(
-  root,
-  "founder-command-center",
-  "build-system",
-  "buildTask.json"
-);
+  const buildTaskPath = path.join(
+    root,
+    "founder-command-center",
+    "runtime",
+    "buildTask.json"
+  );
 
 type CycleResult = {
   cycle: number;
@@ -127,12 +127,18 @@ function relevantGitStatus(rawStatus: string): string {
     .join("\n");
 }
 
-function execStep(command: string) {
+// Maximum seconds a single overnight step may run before forced termination.
+// Prevents a hung model, stuck pipeline, or stalled approval candidate
+// from wedging the overnight loop indefinitely.
+const EXEC_STEP_TIMEOUT_MS = 300_000; // 5 minutes
+
+function execStep(command: string, timeoutMs: number = EXEC_STEP_TIMEOUT_MS) {
   return execSync(command, {
     cwd: root,
     encoding: "utf-8",
     stdio: ["ignore", "pipe", "pipe"],
     shell: getShell(),
+    timeout: timeoutMs,
     env: {
       ...process.env,
       ZEUS_RUNTIME_MODE: "OVERNIGHT_SAFE_MODE",
@@ -149,7 +155,12 @@ function execStep(command: string) {
 }
 
 function sleep(ms: number) {
-  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
+  const seconds = Math.max(1, Math.ceil(ms / 1000));
+  if (process.platform === "win32") {
+    execSync(`ping 127.0.0.1 -n ${seconds + 1} > nul`, { stdio: "ignore", shell: getShell() });
+  } else {
+    execSync(`sleep ${seconds}`, { stdio: "ignore", shell: getShell() });
+  }
 }
 
 function writeLogLine(logFile: string, message: string) {
@@ -478,6 +489,19 @@ function main() {
 
   writeLogLine(logFile, `Overnight report written: ${reportPath}`);
   writeLogLine(logFile, "ZEUS overnight self-build finished.");
+
+  // Generate morning report automatically after overnight completes
+  writeLogLine(logFile, "Generating morning report.");
+  try {
+    const morningOutput = execStep(
+      "npx tsx founder-command-center/zeus/zeusMorningReport.ts"
+    );
+    if (morningOutput) writeLogLine(logFile, morningOutput);
+    writeLogLine(logFile, "Morning report generated successfully.");
+  } catch (error: any) {
+    writeLogLine(logFile, "Morning report generation failed.");
+    writeLogLine(logFile, error?.stderr?.toString?.() || error?.message || String(error));
+  }
 }
 
 main();

@@ -46,7 +46,8 @@
     "zeus:open-app": "tsx founder-command-center/zeus/zeusCommandRouter.ts open-app",
     "zeus:files": "tsx founder-command-center/zeus/zeusCommandRouter.ts files",
     "zeus:browser": "tsx founder-command-center/zeus/zeusCommandRouter.ts browser",
-    "zeus:computer": "tsx founder-command-center/zeus/zeusCommandRouter.ts computer"
+    "zeus:review": "tsx founder-command-center/zeus/zeusCommandRouter.ts review",
+    "zeus:set-mode": "tsx founder-command-center/zeus/zeusCommandRouter.ts set-mode"
   },
   "keywords": [],
   "author": "",

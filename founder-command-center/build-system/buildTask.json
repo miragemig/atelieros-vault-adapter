@@ -1,15 +1,15 @@
 {
-  "id": "zeus-response-section-parser",
-  "title": "ZEUS Response Section Parser",
+  "id": "zeus-obsidian-sync-draft",
+  "title": "ZEUS Obsidian Sync Draft",
   "model": "qwen2.5-coder:7b",
   "provider": "ollama",
   "mayGenerateCost": false,
   "maxAttempts": 3,
   "requirements": [
-    "create parser for ZEUS response sections",
-    "extract Questao a decidir, Opcoes, Riscos, Recomendacao, Modo atual",
-    "no filesystem writes",
+    "draft a safe ZEUS to Obsidian sync module",
+    "summarize status, reports and decisions",
+    "write no files in generated module",
     "no external dependencies",
-    "include inline examples"
+    "include safety notes"
   ]
 }

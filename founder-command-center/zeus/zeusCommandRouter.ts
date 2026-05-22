@@ -1,7 +1,7 @@
 import { execSync } from "child_process";
 import fs from "fs";
 import path from "path";
-import { appendEvent } from "./zeusControlPlane";
+import { appendEvent, readGatewayState, writeGatewayState } from "./zeusControlPlane";
 
 const root = process.cwd();
 
@@ -68,6 +68,7 @@ function printHelp(): void {
     "  zeus status",
     "  zeus gateway-status",
     "  zeus overnight-self-build [hours] [interval-minutes]",
+    "  zeus morning-report",
     "  zeus watch [seconds]",
     "  zeus classify <text>",
     "",
@@ -190,9 +191,41 @@ function main(): void {
       return;
     }
 
+    case "morning-report":
+      run(tsx("founder-command-center/zeus/zeusMorningReport.ts"));
+      return;
+
     case "watch": {
       const seconds = args[0] || "15";
       run(tsx("founder-command-center/zeus/zeusWatch.ts", [seconds]));
+      return;
+    }
+
+    case "review":
+      run(tsx("founder-command-center/zeus/zeusReview.ts"));
+      return;
+
+    case "set-mode": {
+      const newMode = args[0]?.toUpperCase();
+      if (newMode !== "DELIBERATION_ONLY" && newMode !== "SAFE_AUTONOMOUS_BUILD") {
+        throw new Error("Usage: zeus set-mode <DELIBERATION_ONLY|SAFE_AUTONOMOUS_BUILD>");
+      }
+      const state = readGatewayState();
+      if (state) {
+        const previousMode = state.mode;
+        state.mode = newMode;
+        state.updatedAt = new Date().toISOString();
+        writeGatewayState(state);
+        appendEvent({
+          source: "router",
+          type: "mode_changed",
+          summary: `ZEUS mode changed to ${newMode}.`,
+          data: { newMode, previousMode }
+        });
+        console.log(`ZEUS mode changed: ${previousMode} → ${newMode}.`);
+      } else {
+        throw new Error("Cannot read gateway state. Run zeus status first.");
+      }
       return;
     }
 

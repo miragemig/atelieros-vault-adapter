@@ -100,6 +100,39 @@ function getGitState() {
   }
 }
 
+function getPendingApprovals(): number {
+  try {
+    const candidatesDir = path.join(root, "founder-command-center", "build-system", "approval-candidates");
+    if (!fs.existsSync(candidatesDir)) return 0;
+    return fs.readdirSync(candidatesDir)
+      .filter((f) => f.endsWith(".candidate.ts"))
+      .length;
+  } catch {
+    return 0;
+  }
+}
+
+function getBuildQueueLength(): number {
+  try {
+    const queuePath = path.join(root, "founder-command-center", "build-system", "roadmapQueue.json");
+    if (!fs.existsSync(queuePath)) return 0;
+    const queue = JSON.parse(fs.readFileSync(queuePath, "utf-8"));
+    return (queue.tasks || []).filter((t: any) => t.status === "queued").length;
+  } catch {
+    return 0;
+  }
+}
+
+function getHermesOutboxCount(): number {
+  try {
+    const outboxDir = path.join(root, "founder-command-center", "hermes", "outbox");
+    if (!fs.existsSync(outboxDir)) return 0;
+    return fs.readdirSync(outboxDir).filter((f) => f.endsWith(".json")).length;
+  } catch {
+    return 0;
+  }
+}
+
 function generateMorningReport(): MorningReport {
   const overnightReport = getLatestOvernightReport();
   const gitState = getGitState();
@@ -156,9 +189,9 @@ function generateMorningReport(): MorningReport {
     
     state: {
       gitBranch: gitState.branch,
-      buildQueueLength: 0, // TODO: read from roadmap queue
-      pendingApprovals: 0, // TODO: read from approval system
-      hermesOutbox: 0 // TODO: read from hermes
+      buildQueueLength: getBuildQueueLength(),
+      pendingApprovals: getPendingApprovals(),
+      hermesOutbox: getHermesOutboxCount()
     },
     
     recommendations: [
@@ -199,6 +232,9 @@ function printReport(report: MorningReport) {
   console.log("\n=== ZEUS MORNING REPORT ===\n");
   console.log(`Generated: ${report.generatedAt}`);
   console.log(`Git branch: ${report.state.gitBranch}`);
+  console.log(`Build queue: ${report.state.buildQueueLength} tasks`);
+  console.log(`Pending approvals: ${report.state.pendingApprovals}`);
+  console.log(`Hermes outbox: ${report.state.hermesOutbox} drafts`);
   console.log("");
   
   console.log("OVERNIGHT SUMMARY");

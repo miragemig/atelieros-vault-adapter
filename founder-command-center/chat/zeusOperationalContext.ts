@@ -34,7 +34,7 @@ function latestFile(dirPath: string, extension: string): string | null {
 
 export function readOperationalContext() {
   const reportsPath = path.join(root, "founder-command-center/build-system/reports");
-  const buildTaskPath = path.join(root, "founder-command-center/build-system/buildTask.json");
+  const buildTaskPath = path.join(root, "founder-command-center/runtime/buildTask.json");
 
   const latestReportPath = latestFile(reportsPath, ".json");
   const latestReport = latestReportPath && fs.existsSync(latestReportPath)

@@ -2,6 +2,7 @@ import { execSync } from "child_process";
 import fs from "fs";
 import path from "path";
 import { getCanonicalOlympusAgents } from "../olympus/agentRegistry";
+import { redactData } from "./zeusRedact";
 
 const root = process.cwd();
 const runtimeDir = path.join(root, "founder-command-center", "runtime");
@@ -23,7 +24,7 @@ export type ZeusGatewayState = {
   system: "ZEUS";
   version: string;
   updatedAt: string;
-  mode: "DELIBERATION_ONLY";
+  mode: "DELIBERATION_ONLY" | "SAFE_AUTONOMOUS_BUILD";
   session: {
     mainSession: string;
     currentFocus: string;
@@ -152,7 +153,7 @@ export function appendEvent(input: Omit<ZeusEvent, "id" | "at">) {
     source: input.source,
     type: input.type,
     summary: input.summary,
-    data: input.data
+    data: input.data !== undefined ? redactData(input.data) : undefined
   };
 
   fs.appendFileSync(eventJournalPath, `${JSON.stringify(event)}\n`, "utf-8");
@@ -174,7 +175,7 @@ function getBuildState() {
   const buildTaskPath = path.join(
     root,
     "founder-command-center",
-    "build-system",
+    "runtime",
     "buildTask.json"
   );
   const reportsDir = path.join(

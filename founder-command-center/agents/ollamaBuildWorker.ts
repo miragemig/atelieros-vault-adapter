@@ -18,7 +18,7 @@ const root = process.cwd();
 
 const taskPath = path.join(
   root,
-  "founder-command-center/build-system/buildTask.json"
+  "founder-command-center/runtime/buildTask.json"
 );
 
 const quarantinePath = path.join(

@@ -28,6 +28,7 @@ founder-command-center/runtime/overnight/
 founder-command-center/runtime/roadmapQueueState.json
 founder-command-center/runtime/zeus-event-journal.jsonl
 founder-command-center/runtime/zeus-gateway-state.json
+founder-command-center/runtime/buildTask.json
 founder-command-center/patch-system/patch-reports/
 founder-command-center/hermes/gmail/secrets/
 founder-command-center/hermes/gmail/tokens/
