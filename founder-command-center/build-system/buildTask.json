@@ -1,14 +1,15 @@
 {
-  "id": "fix-zeus-risk-formatting",
-  "title": "Fix ZEUS Risk Formatting",
+  "id": "zeus-response-section-parser",
+  "title": "ZEUS Response Section Parser",
   "model": "qwen2.5-coder:7b",
   "provider": "ollama",
   "mayGenerateCost": false,
   "maxAttempts": 3,
   "requirements": [
-    "fix risk list formatting in ZEUS advisor output",
-    "ensure each risk appears on its own line",
-    "preserve DELIBERATION_ONLY mode",
-    "do not change project creation behavior"
+    "create parser for ZEUS response sections",
+    "extract Questao a decidir, Opcoes, Riscos, Recomendacao, Modo atual",
+    "no filesystem writes",
+    "no external dependencies",
+    "include inline examples"
   ]
 }

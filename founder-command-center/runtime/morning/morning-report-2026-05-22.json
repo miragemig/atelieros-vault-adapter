@@ -1,0 +1,41 @@
+{
+  "system": "ZEUS",
+  "generatedAt": "2026-05-22T07:29:33.538Z",
+  "mode": "MORNING_REVIEW",
+  "overnight": {
+    "totalCycles": 0,
+    "results": {
+      "autonomouslyApplied": 0,
+      "passedForReview": 0,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "attempted": [],
+  "applied": [],
+  "failed": [],
+  "state": {
+    "gitBranch": "master",
+    "buildQueueLength": 0,
+    "pendingApprovals": 0,
+    "hermesOutbox": 0
+  },
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "Review overnight build results",
+      "reasoning": "Autonomous work completed; requires human approval before production push"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Check failed tasks",
+      "reasoning": "Failed tasks should be analyzed to improve next build cycle"
+    },
+    {
+      "priority": "LOW",
+      "action": "Monitor system health",
+      "reasoning": "Verify that system state is consistent and ready for next cycle"
+    }
+  ],
+  "auditPath": "unknown"
+}

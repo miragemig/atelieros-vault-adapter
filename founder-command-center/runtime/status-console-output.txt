@@ -1,0 +1,136 @@
+ZEUS COMMAND CENTER
+
+Miguel: Supreme Tribunal
+ZEUS: Sovereign judge-orchestrator
+Mode: DELIBERATION_ONLY / APPROVAL_GATED
+
+========================================================================
+CONTROL PLANE
+========================================================================
+Updated at: 2026-05-22T07:29:48.785Z
+Main session: miguel-primary
+Current focus: zeus-response-section-parser
+Latest build report: fail
+Hermes drafts: 2
+Hermes approvals: 25
+Recent events: 64
+Latest doctor: E:\ZEUS\founder-command-center\logs\doctor\doctor-report-1779434929386.json
+Next action: Rever altera├º├Áes locais antes de executar a├º├Áes adicionais.
+
+========================================================================
+GIT
+========================================================================
+M founder-command-center/build-system/buildTask.json
+?? founder-command-center/runtime/morning/
+?? founder-command-center/runtime/status-console-output.txt
+
+5f2aa37 Fase 2: Melhorar detec├º├úo de git dirty para ignorar ficheiros tempor├írios
+9679481 Fase 2: Adicionar Morning Report generator
+47a6ff3 Remove runtime state files from git tracking (keep in .gitignore)
+fc6c8de Fase 2: Recuperar seletor de roadmap tasks (fix failed queue state)
+62cd875 Fase 1: Limpar depend├¬ncias Windows (paths, shells, compatibilidade)
+
+========================================================================
+ROADMAP QUEUE
+========================================================================
+Status counts:
+{
+  "in_progress": 2,
+  "queued": 2
+}
+
+Latest tasks:
+- zeus-response-section-parser [in_progress]
+- fix-zeus-risk-formatting [in_progress]
+- zeus-obsidian-sync-draft [queued]
+- zeus-morning-report-draft [queued]
+
+========================================================================
+PATCH CANDIDATES
+========================================================================
+- fix-zeus-risk-formatting-1779349625787 | task=fix-zeus-risk-formatting | status=waiting_review | approval=true
+
+========================================================================
+LATEST OVERNIGHT LOGS
+========================================================================
+- overnight-self-build-2026-05-22T07-28-42-810Z.log
+- overnight-self-build-2026-05-22T07-23-28-152Z.log
+- overnight-self-build-2026-05-22T07-22-41-025Z.log
+- overnight-self-build-2026-05-22T07-22-04-533Z.log
+- overnight-self-build-2026-05-21T23-11-23-801Z.log
+
+========================================================================
+LATEST BUILD REPORTS
+========================================================================
+- build-report-1779434936528.json
+- build-report-1779311470542.json
+- build-report-1779310354928.json
+- build-report-1779309209270.json
+- build-report-1779308146763.json
+
+========================================================================
+RECENT EVENTS
+========================================================================
+- 2026-05-22T07:29:48.788Z | status-console | gateway_synced | Gateway state synchronized.
+- 2026-05-22T07:29:41.223Z | status-console | gateway_synced | Gateway state synchronized.
+- 2026-05-22T07:28:53.972Z | overnight-self-build | roadmap_task_selected | ZEUS selected roadmap task zeus-response-section-parser for overnight build.
+- 2026-05-22T07:28:51.350Z | doctor | doctor_ran | ZEUS doctor completed with status warn.
+- 2026-05-22T07:28:51.350Z | doctor | gateway_synced | Gateway state synchronized.
+- 2026-05-22T07:28:45.293Z | overnight-start | gateway_synced | Gateway state synchronized.
+- 2026-05-22T07:28:43.515Z | overnight-self-build | overnight_started | ZEUS overnight self-build started.
+- 2026-05-22T07:23:41.982Z | overnight-self-build | cycle_completed | ZEUS overnight cycle 1 completed with outcome skipped_git_dirty.
+
+========================================================================
+OLYMPUS
+========================================================================
+Classical layer active now:
+- ZEUS: Sovereign Judge-Orchestrator
+- Hera: Relational and Institutional Governance
+- Poseidon: External Surfaces, Browser and Network Volatility
+- Demeter: Resources, Documents and Material Continuity
+- Ares: Risk and Adversarial Review
+- Artemis: Precision Watch and Discreet Observation
+- Aphrodite: Desirability, Appeal and Human Connection
+- Hephaestus: Build, Engineering and Patches
+- Hermes: Communication, Inbox and Tickets
+- Hestia: Operational Hearth, Memory and System Continuity
+- Athena: Strategy, Priorities and Decision Criteria
+- Apollo: Communication, Narrative and Positioning
+
+Classical layer designed next:
+- Hera: Relational and Institutional Governance
+- Poseidon: External Surfaces, Browser and Network Volatility
+- Demeter: Resources, Documents and Material Continuity
+- Artemis: Precision Watch and Discreet Observation
+- Aphrodite: Desirability, Appeal and Human Connection
+- Hestia: Operational Hearth, Memory and System Continuity
+
+Internal absorbed functions:
+- Themis: Rules, Gates and Permissions
+- Harmonia: Quality, Coherence and Final Review
+- Mnemosyne: Internal Memory and Knowledge
+- Argus: External Intelligence and Watch
+- Daedalus: Product, UX and Systems
+- Plutus: Finance and Economic Reasoning
+- Prometheus: Innovation and Future Systems
+
+========================================================================
+ZEUS CAPABILITIES
+========================================================================
+{
+  "sandbox_only": 3,
+  "planned": 6,
+  "approval_required": 3,
+  "active": 10
+}
+
+========================================================================
+CLEAN-ROOM EXTERNAL PATTERNS
+========================================================================
+- external-ai-assistant-patterns-reference.md
+
+========================================================================
+NEXT RECOMMENDED ACTION
+========================================================================
+Block execution. Review working tree before running overnight or applying candidates.
+
