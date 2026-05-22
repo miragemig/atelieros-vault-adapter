@@ -1,0 +1,44 @@
+{
+  "id": "snap-1779459334256",
+  "capturedAt": "2026-05-22T14:15:34.256Z",
+  "label": "Memory Governance V2 Complete",
+  "identity": {
+    "status": "recovering",
+    "stability": "degrading",
+    "confidence": 72,
+    "maturityScore": 67,
+    "currentPhase": "Consolidation — linking entities and detecting patterns",
+    "narrative": "ZEUS is currently recovering. Working on 1 objectives, highest priority: \"Implement Hestia Memory Governance\". Build pipeline has critical degradation signals — recovery mode active. Operating in SAFE_AUTONOMOUS_BUILD mode — self-building within governance bounds. Maturity: Consolidation — linking entities and detecting patterns. Confidence: 72/100."
+  },
+  "recentActivity": {
+    "last24hEvents": 103,
+    "lastBuildStatus": "pass",
+    "lastModeChange": {
+      "from": "DELIBERATION_ONLY",
+      "to": "SAFE_AUTONOMOUS_BUILD",
+      "at": "2026-05-22T12:12:57.448Z"
+    }
+  },
+  "currentWork": {
+    "focus": "Hestia system verification and integration",
+    "activeObjectives": 1,
+    "criticalBlockers": 0,
+    "nextSteps": [
+      "Verify Hestia CLI commands work correctly",
+      "Integrate Hestia with zeus command router"
+    ]
+  },
+  "health": {
+    "memoryScore": 100,
+    "governanceIssues": 0,
+    "degradationSignals": 14,
+    "entityGraphNodes": 144,
+    "entityGraphEdges": 38
+  },
+  "growth": {
+    "totalBuilds": 23,
+    "totalDecisions": 0,
+    "totalCanonical": 1,
+    "memorySizeKB": 0
+  }
+}

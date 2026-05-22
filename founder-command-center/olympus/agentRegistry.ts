@@ -301,16 +301,24 @@ export const olympusAgents: Record<string, OlympusAgent> = {
     name: "Hestia",
     title: "Operational Hearth, Memory and System Continuity",
     role:
-      "Protects the inner centre of the system: memory, stable context, continuity and calm operational state.",
-    domains: ["memory", "context", "continuity", "state", "operational-centre"],
-    operationalStatus: "DESIGNED_NEXT",
+      "Protects the inner centre of the system: session continuity, entity graph, memory governance, timeline intelligence and operational summaries. Provides cognitive synthesis from raw operational data.",
+    domains: [
+      "session-continuity", "entity-graph", "memory-governance",
+      "timeline-intelligence", "operational-summary", "objectives",
+      "decisions", "blockers", "system-health"
+    ],
+    operationalStatus: "ACTIVE_NOW",
     canonicalStatus: "classical_12",
     canAdvise: true,
     canExecute: true,
     requiresApprovalFor: ["critical_memory_rewrite", "memory_delete"],
-    limits: ["Cannot rewrite critical system memory without approval."],
+    limits: [
+      "Cannot rewrite critical system memory without approval.",
+      "Cannot modify the entity graph directly — only scan and report.",
+      "Governance checks are advisory; human decides on cleanup actions."
+    ],
     boundary:
-      "Hestia keeps the centre stable and the context warm. She does not rewrite critical memory without gate."
+      "Hestia keeps the centre stable, the memory warm, and the context coherent. She scans, tracks, synthesises and warns — but does not rewrite critical memory without gate."
   },
 
   athena: {

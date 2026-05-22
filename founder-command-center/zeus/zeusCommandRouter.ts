@@ -446,6 +446,40 @@ function main(): void {
       return;
     }
 
+    case "hestia": {
+      const [hestiaCommand, ...hestiaArgs] = args;
+      if (!hestiaCommand) {
+        run(tsx("founder-command-center/olympus/hestia.ts", ["help"]));
+        return;
+      }
+      run(tsx("founder-command-center/olympus/hestia.ts", [hestiaCommand, ...hestiaArgs.map(quote)]));
+      return;
+    }
+
+    case "hestia-status":
+      run(tsx("founder-command-center/olympus/hestia.ts", ["status"]));
+      return;
+
+    case "hestia-summary":
+      run(tsx("founder-command-center/olympus/hestia.ts", ["summary"]));
+      return;
+
+    case "hestia-graph":
+      run(tsx("founder-command-center/olympus/hestia.ts", ["graph"]));
+      return;
+
+    case "hestia-timeline":
+      run(tsx("founder-command-center/olympus/hestia.ts", ["timeline"]));
+      return;
+
+    case "hestia-governance":
+      run(tsx("founder-command-center/olympus/hestia.ts", ["governance"]));
+      return;
+
+    case "hestia-morning":
+      run(tsx("founder-command-center/olympus/hestia.ts", ["morning"]));
+      return;
+
     case "surgical-patch": {
       const taskPath = args[0];
       if (!taskPath) {

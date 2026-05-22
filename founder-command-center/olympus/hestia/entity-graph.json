@@ -1,0 +1,1681 @@
+{
+  "nodes": {
+    "task-zeus-health-check": {
+      "id": "task-zeus-health-check",
+      "type": "task",
+      "label": "Task: zeus-health-check",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\runtime\\buildTask.json",
+      "createdAt": "2026-05-22T13:58:44.161Z",
+      "modifiedAt": "2026-05-22T13:58:44.161Z",
+      "metadata": {
+        "taskId": "zeus-health-check"
+      }
+    },
+    "task-zeus-response-section-parser": {
+      "id": "task-zeus-response-section-parser",
+      "type": "task",
+      "label": "Task: zeus-response-section-parser",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\runtime\\buildTask.json",
+      "createdAt": "2026-05-22T13:58:44.161Z",
+      "modifiedAt": "2026-05-22T13:58:44.161Z",
+      "metadata": {
+        "taskId": "zeus-response-section-parser"
+      }
+    },
+    "task-zeus-morning-report-draft": {
+      "id": "task-zeus-morning-report-draft",
+      "type": "task",
+      "label": "Task: zeus-morning-report-draft",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\runtime\\buildTask.json",
+      "createdAt": "2026-05-22T13:58:44.161Z",
+      "modifiedAt": "2026-05-22T13:58:44.161Z",
+      "metadata": {
+        "taskId": "zeus-morning-report-draft"
+      }
+    },
+    "task-zeus-obsidian-sync-draft": {
+      "id": "task-zeus-obsidian-sync-draft",
+      "type": "task",
+      "label": "Task: zeus-obsidian-sync-draft",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\runtime\\buildTask.json",
+      "createdAt": "2026-05-22T13:58:44.161Z",
+      "modifiedAt": "2026-05-22T13:58:44.161Z",
+      "metadata": {
+        "taskId": "zeus-obsidian-sync-draft"
+      }
+    },
+    "task-fix-zeus-risk-formatting": {
+      "id": "task-fix-zeus-risk-formatting",
+      "type": "task",
+      "label": "Task: fix-zeus-risk-formatting",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\runtime\\buildTask.json",
+      "createdAt": "2026-05-22T13:58:44.161Z",
+      "modifiedAt": "2026-05-22T13:58:44.161Z",
+      "metadata": {
+        "taskId": "fix-zeus-risk-formatting"
+      }
+    },
+    "task-memory-entity-deduplicator": {
+      "id": "task-memory-entity-deduplicator",
+      "type": "task",
+      "label": "Task: memory-entity-deduplicator",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\runtime\\buildTask.json",
+      "createdAt": "2026-05-22T13:58:44.161Z",
+      "modifiedAt": "2026-05-22T13:58:44.161Z",
+      "metadata": {
+        "taskId": "memory-entity-deduplicator"
+      }
+    },
+    "build-1779452843942": {
+      "id": "build-1779452843942",
+      "type": "build_report",
+      "label": "zeus-health-check",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779452843942.json",
+      "createdAt": "2026-05-22T12:27:23.942Z",
+      "modifiedAt": "2026-05-22T12:28:48.134Z",
+      "metadata": {
+        "status": "pass",
+        "taskId": "zeus-health-check",
+        "taskTitle": "ZEUS Health Check Module"
+      }
+    },
+    "build-1779451929349": {
+      "id": "build-1779451929349",
+      "type": "build_report",
+      "label": "zeus-health-check",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779451929349.json",
+      "createdAt": "2026-05-22T12:12:09.349Z",
+      "modifiedAt": "2026-05-22T12:12:43.231Z",
+      "metadata": {
+        "status": "pass",
+        "taskId": "zeus-health-check",
+        "taskTitle": "ZEUS Health Check Module"
+      }
+    },
+    "build-1779451847921": {
+      "id": "build-1779451847921",
+      "type": "build_report",
+      "label": "zeus-health-check",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779451847921.json",
+      "createdAt": "2026-05-22T12:10:47.921Z",
+      "modifiedAt": "2026-05-22T12:11:21.895Z",
+      "metadata": {
+        "status": "fail",
+        "taskId": "zeus-health-check",
+        "taskTitle": "ZEUS Health Check Module"
+      }
+    },
+    "build-1779451773160": {
+      "id": "build-1779451773160",
+      "type": "build_report",
+      "label": "zeus-health-check",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779451773160.json",
+      "createdAt": "2026-05-22T12:09:33.160Z",
+      "modifiedAt": "2026-05-22T12:10:05.646Z",
+      "metadata": {
+        "status": "fail",
+        "taskId": "zeus-health-check",
+        "taskTitle": "ZEUS Health Check Module"
+      }
+    },
+    "build-1779434936528": {
+      "id": "build-1779434936528",
+      "type": "build_report",
+      "label": "zeus-response-section-parser",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779434936528.json",
+      "createdAt": "2026-05-22T07:28:56.528Z",
+      "modifiedAt": "2026-05-22T07:29:13.622Z",
+      "metadata": {
+        "status": "fail",
+        "taskId": "zeus-response-section-parser",
+        "taskTitle": "ZEUS Response Section Parser"
+      }
+    },
+    "build-1779311470542": {
+      "id": "build-1779311470542",
+      "type": "build_report",
+      "label": "zeus-morning-report-draft",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779311470542.json",
+      "createdAt": "2026-05-20T21:11:10.542Z",
+      "modifiedAt": "2026-05-20T21:21:22.000Z",
+      "metadata": {
+        "status": "fail",
+        "taskId": "zeus-morning-report-draft",
+        "taskTitle": "ZEUS Morning Report Draft"
+      }
+    },
+    "build-1779310354928": {
+      "id": "build-1779310354928",
+      "type": "build_report",
+      "label": "zeus-obsidian-sync-draft",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779310354928.json",
+      "createdAt": "2026-05-20T20:52:34.928Z",
+      "modifiedAt": "2026-05-20T21:06:04.000Z",
+      "metadata": {
+        "status": "fail",
+        "taskId": "zeus-obsidian-sync-draft",
+        "taskTitle": "ZEUS Obsidian Sync Draft"
+      }
+    },
+    "build-1779309209270": {
+      "id": "build-1779309209270",
+      "type": "build_report",
+      "label": "zeus-response-section-parser",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779309209270.json",
+      "createdAt": "2026-05-20T20:33:29.270Z",
+      "modifiedAt": "2026-05-20T20:47:28.000Z",
+      "metadata": {
+        "status": "fail",
+        "taskId": "zeus-response-section-parser",
+        "taskTitle": "ZEUS Response Section Parser"
+      }
+    },
+    "build-1779308146763": {
+      "id": "build-1779308146763",
+      "type": "build_report",
+      "label": "fix-zeus-risk-formatting",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779308146763.json",
+      "createdAt": "2026-05-20T20:15:46.763Z",
+      "modifiedAt": "2026-05-20T20:28:22.000Z",
+      "metadata": {
+        "status": "fail",
+        "taskId": "fix-zeus-risk-formatting",
+        "taskTitle": "Fix ZEUS Risk Formatting"
+      }
+    },
+    "build-1779307554495": {
+      "id": "build-1779307554495",
+      "type": "build_report",
+      "label": "memory-entity-deduplicator",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779307554495.json",
+      "createdAt": "2026-05-20T20:05:54.495Z",
+      "modifiedAt": "2026-05-20T20:08:52.000Z",
+      "metadata": {
+        "status": "pass",
+        "taskId": "memory-entity-deduplicator",
+        "taskTitle": "Memory Entity Deduplicator"
+      }
+    },
+    "build-1779307086049": {
+      "id": "build-1779307086049",
+      "type": "build_report",
+      "label": "memory-entity-deduplicator",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779307086049.json",
+      "createdAt": "2026-05-20T19:58:06.049Z",
+      "modifiedAt": "2026-05-20T19:59:22.000Z",
+      "metadata": {
+        "status": "pass",
+        "taskId": "memory-entity-deduplicator",
+        "taskTitle": "Memory Entity Deduplicator"
+      }
+    },
+    "build-1779306546370": {
+      "id": "build-1779306546370",
+      "type": "build_report",
+      "label": "memory-entity-deduplicator",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779306546370.json",
+      "createdAt": "2026-05-20T19:49:06.370Z",
+      "modifiedAt": "2026-05-20T19:51:50.000Z",
+      "metadata": {
+        "status": "pass",
+        "taskId": "memory-entity-deduplicator",
+        "taskTitle": "Memory Entity Deduplicator"
+      }
+    },
+    "build-1779276938035": {
+      "id": "build-1779276938035",
+      "type": "build_report",
+      "label": "memory-entity-deduplicator",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779276938035.json",
+      "createdAt": "2026-05-20T11:35:38.035Z",
+      "modifiedAt": "2026-05-20T11:37:12.000Z",
+      "metadata": {
+        "status": "pass",
+        "taskId": "memory-entity-deduplicator",
+        "taskTitle": "Memory Entity Deduplicator"
+      }
+    },
+    "build-1779276806140": {
+      "id": "build-1779276806140",
+      "type": "build_report",
+      "label": "memory-entity-deduplicator",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779276806140.json",
+      "createdAt": "2026-05-20T11:33:26.140Z",
+      "modifiedAt": "2026-05-20T11:34:26.000Z",
+      "metadata": {
+        "status": "pass",
+        "taskId": "memory-entity-deduplicator",
+        "taskTitle": "Memory Entity Deduplicator"
+      }
+    },
+    "build-1779276440387": {
+      "id": "build-1779276440387",
+      "type": "build_report",
+      "label": "memory-entity-deduplicator",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779276440387.json",
+      "createdAt": "2026-05-20T11:27:20.387Z",
+      "modifiedAt": "2026-05-20T11:29:02.000Z",
+      "metadata": {
+        "status": "pass",
+        "taskId": "memory-entity-deduplicator",
+        "taskTitle": "Memory Entity Deduplicator"
+      }
+    },
+    "build-1779276189969": {
+      "id": "build-1779276189969",
+      "type": "build_report",
+      "label": "memory-entity-deduplicator",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779276189969.json",
+      "createdAt": "2026-05-20T11:23:09.969Z",
+      "modifiedAt": "2026-05-20T11:26:16.000Z",
+      "metadata": {
+        "status": "pass",
+        "taskId": "memory-entity-deduplicator",
+        "taskTitle": "Memory Entity Deduplicator"
+      }
+    },
+    "build-1779274263673": {
+      "id": "build-1779274263673",
+      "type": "build_report",
+      "label": "memory-entity-deduplicator",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779274263673.json",
+      "createdAt": "2026-05-20T10:51:03.673Z",
+      "modifiedAt": "2026-05-20T10:54:36.000Z",
+      "metadata": {
+        "status": "pass",
+        "taskId": "memory-entity-deduplicator",
+        "taskTitle": "Memory Entity Deduplicator"
+      }
+    },
+    "build-1779274121243": {
+      "id": "build-1779274121243",
+      "type": "build_report",
+      "label": "memory-entity-deduplicator",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779274121243.json",
+      "createdAt": "2026-05-20T10:48:41.243Z",
+      "modifiedAt": "2026-05-20T10:48:42.000Z",
+      "metadata": {
+        "status": "fail",
+        "taskId": "memory-entity-deduplicator",
+        "taskTitle": "Memory Entity Deduplicator"
+      }
+    },
+    "build-1779273802501": {
+      "id": "build-1779273802501",
+      "type": "build_report",
+      "label": "memory-entity-deduplicator",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779273802501.json",
+      "createdAt": "2026-05-20T10:43:22.501Z",
+      "modifiedAt": "2026-05-20T10:43:24.000Z",
+      "metadata": {
+        "status": "fail",
+        "taskId": "memory-entity-deduplicator",
+        "taskTitle": "Memory Entity Deduplicator"
+      }
+    },
+    "build-1779272824111": {
+      "id": "build-1779272824111",
+      "type": "build_report",
+      "label": "build-report-1779272824111.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779272824111.json",
+      "createdAt": "2026-05-20T10:27:04.111Z",
+      "modifiedAt": "2026-05-20T10:28:36.000Z",
+      "metadata": {
+        "status": "pass"
+      }
+    },
+    "build-1779272641819": {
+      "id": "build-1779272641819",
+      "type": "build_report",
+      "label": "build-report-1779272641819.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779272641819.json",
+      "createdAt": "2026-05-20T10:24:01.819Z",
+      "modifiedAt": "2026-05-20T10:26:16.000Z",
+      "metadata": {
+        "status": "pass"
+      }
+    },
+    "build-1779271766404": {
+      "id": "build-1779271766404",
+      "type": "build_report",
+      "label": "build-report-1779271766404.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779271766404.json",
+      "createdAt": "2026-05-20T10:09:26.404Z",
+      "modifiedAt": "2026-05-20T10:21:08.000Z",
+      "metadata": {
+        "status": "fail"
+      }
+    },
+    "build-1779270943420": {
+      "id": "build-1779270943420",
+      "type": "build_report",
+      "label": "build-report-1779270943420.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\reports\\build-report-1779270943420.json",
+      "createdAt": "2026-05-20T09:55:43.420Z",
+      "modifiedAt": "2026-05-20T10:02:26.000Z",
+      "metadata": {
+        "status": "pass"
+      }
+    },
+    "approval-voice-approval-1779384542102": {
+      "id": "approval-voice-approval-1779384542102",
+      "type": "approval",
+      "label": "voice-approval-1779384542102.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779384542102.json",
+      "createdAt": "2026-05-21T17:29:02.102Z",
+      "modifiedAt": "2026-05-21T17:29:04.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779384532296": {
+      "id": "approval-voice-approval-1779384532296",
+      "type": "approval",
+      "label": "voice-approval-1779384532296.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779384532296.json",
+      "createdAt": "2026-05-21T17:28:52.296Z",
+      "modifiedAt": "2026-05-21T17:28:54.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779384494552": {
+      "id": "approval-voice-approval-1779384494552",
+      "type": "approval",
+      "label": "voice-approval-1779384494552.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779384494552.json",
+      "createdAt": "2026-05-21T17:28:14.553Z",
+      "modifiedAt": "2026-05-21T17:28:16.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779378947405": {
+      "id": "approval-voice-approval-1779378947405",
+      "type": "approval",
+      "label": "voice-approval-1779378947405.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779378947405.json",
+      "createdAt": "2026-05-21T15:55:47.405Z",
+      "modifiedAt": "2026-05-21T15:55:48.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779378672709": {
+      "id": "approval-voice-approval-1779378672709",
+      "type": "approval",
+      "label": "voice-approval-1779378672709.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779378672709.json",
+      "createdAt": "2026-05-21T15:51:12.709Z",
+      "modifiedAt": "2026-05-21T15:51:14.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779378583004": {
+      "id": "approval-voice-approval-1779378583004",
+      "type": "approval",
+      "label": "voice-approval-1779378583004.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779378583004.json",
+      "createdAt": "2026-05-21T15:49:43.004Z",
+      "modifiedAt": "2026-05-21T15:49:44.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779378402337": {
+      "id": "approval-voice-approval-1779378402337",
+      "type": "approval",
+      "label": "voice-approval-1779378402337.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779378402337.json",
+      "createdAt": "2026-05-21T15:46:42.337Z",
+      "modifiedAt": "2026-05-21T15:46:44.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779377835558": {
+      "id": "approval-voice-approval-1779377835558",
+      "type": "approval",
+      "label": "voice-approval-1779377835558.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779377835558.json",
+      "createdAt": "2026-05-21T15:37:15.558Z",
+      "modifiedAt": "2026-05-21T15:37:16.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779376482222": {
+      "id": "approval-voice-approval-1779376482222",
+      "type": "approval",
+      "label": "voice-approval-1779376482222.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779376482222.json",
+      "createdAt": "2026-05-21T15:14:42.222Z",
+      "modifiedAt": "2026-05-21T15:14:44.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779376447746": {
+      "id": "approval-voice-approval-1779376447746",
+      "type": "approval",
+      "label": "voice-approval-1779376447746.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779376447746.json",
+      "createdAt": "2026-05-21T15:14:07.746Z",
+      "modifiedAt": "2026-05-21T15:14:08.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779375709714": {
+      "id": "approval-voice-approval-1779375709714",
+      "type": "approval",
+      "label": "voice-approval-1779375709714.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779375709714.json",
+      "createdAt": "2026-05-21T15:01:49.714Z",
+      "modifiedAt": "2026-05-21T15:01:50.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779375659214": {
+      "id": "approval-voice-approval-1779375659214",
+      "type": "approval",
+      "label": "voice-approval-1779375659214.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779375659214.json",
+      "createdAt": "2026-05-21T15:00:59.214Z",
+      "modifiedAt": "2026-05-21T15:01:00.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779375401108": {
+      "id": "approval-voice-approval-1779375401108",
+      "type": "approval",
+      "label": "voice-approval-1779375401108.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779375401108.json",
+      "createdAt": "2026-05-21T14:56:41.108Z",
+      "modifiedAt": "2026-05-21T14:56:42.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779375129389": {
+      "id": "approval-voice-approval-1779375129389",
+      "type": "approval",
+      "label": "voice-approval-1779375129389.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779375129389.json",
+      "createdAt": "2026-05-21T14:52:09.389Z",
+      "modifiedAt": "2026-05-21T14:52:10.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779374890103": {
+      "id": "approval-voice-approval-1779374890103",
+      "type": "approval",
+      "label": "voice-approval-1779374890103.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779374890103.json",
+      "createdAt": "2026-05-21T14:48:10.103Z",
+      "modifiedAt": "2026-05-21T14:48:12.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779374744503": {
+      "id": "approval-voice-approval-1779374744503",
+      "type": "approval",
+      "label": "voice-approval-1779374744503.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779374744503.json",
+      "createdAt": "2026-05-21T14:45:44.503Z",
+      "modifiedAt": "2026-05-21T14:45:46.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779374594718": {
+      "id": "approval-voice-approval-1779374594718",
+      "type": "approval",
+      "label": "voice-approval-1779374594718.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779374594718.json",
+      "createdAt": "2026-05-21T14:43:14.718Z",
+      "modifiedAt": "2026-05-21T14:43:16.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779374185888": {
+      "id": "approval-voice-approval-1779374185888",
+      "type": "approval",
+      "label": "voice-approval-1779374185888.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779374185888.json",
+      "createdAt": "2026-05-21T14:36:25.888Z",
+      "modifiedAt": "2026-05-21T14:36:26.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779373975651": {
+      "id": "approval-voice-approval-1779373975651",
+      "type": "approval",
+      "label": "voice-approval-1779373975651.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779373975651.json",
+      "createdAt": "2026-05-21T14:32:55.651Z",
+      "modifiedAt": "2026-05-21T14:32:56.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779373707069": {
+      "id": "approval-voice-approval-1779373707069",
+      "type": "approval",
+      "label": "voice-approval-1779373707069.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779373707069.json",
+      "createdAt": "2026-05-21T14:28:27.069Z",
+      "modifiedAt": "2026-05-21T14:28:28.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779373569848": {
+      "id": "approval-voice-approval-1779373569848",
+      "type": "approval",
+      "label": "voice-approval-1779373569848.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779373569848.json",
+      "createdAt": "2026-05-21T14:26:09.848Z",
+      "modifiedAt": "2026-05-21T14:26:10.000Z",
+      "metadata": {
+        "status": "rejected"
+      }
+    },
+    "approval-voice-approval-1779373564009": {
+      "id": "approval-voice-approval-1779373564009",
+      "type": "approval",
+      "label": "voice-approval-1779373564009.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779373564009.json",
+      "createdAt": "2026-05-21T14:26:04.010Z",
+      "modifiedAt": "2026-05-21T14:26:06.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779373382959": {
+      "id": "approval-voice-approval-1779373382959",
+      "type": "approval",
+      "label": "voice-approval-1779373382959.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779373382959.json",
+      "createdAt": "2026-05-21T14:23:02.959Z",
+      "modifiedAt": "2026-05-21T14:23:04.000Z",
+      "metadata": {
+        "status": "rejected"
+      }
+    },
+    "approval-voice-approval-1779373345168": {
+      "id": "approval-voice-approval-1779373345168",
+      "type": "approval",
+      "label": "voice-approval-1779373345168.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779373345168.json",
+      "createdAt": "2026-05-21T14:22:25.168Z",
+      "modifiedAt": "2026-05-21T14:22:26.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "approval-voice-approval-1779373216108": {
+      "id": "approval-voice-approval-1779373216108",
+      "type": "approval",
+      "label": "voice-approval-1779373216108.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\approvals\\voice-approval-1779373216108.json",
+      "createdAt": "2026-05-21T14:20:16.108Z",
+      "modifiedAt": "2026-05-21T14:20:18.000Z",
+      "metadata": {
+        "status": "approved_not_sent"
+      }
+    },
+    "send-gate-browser-send-gate-1779376491802": {
+      "id": "send-gate-browser-send-gate-1779376491802",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779376491802.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779376491802.json",
+      "createdAt": "2026-05-21T15:14:51.802Z",
+      "modifiedAt": "2026-05-21T15:14:52.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779376488365": {
+      "id": "send-gate-browser-send-gate-1779376488365",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779376488365.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779376488365.json",
+      "createdAt": "2026-05-21T15:14:48.365Z",
+      "modifiedAt": "2026-05-21T15:14:50.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779376457336": {
+      "id": "send-gate-browser-send-gate-1779376457336",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779376457336.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779376457336.json",
+      "createdAt": "2026-05-21T15:14:17.336Z",
+      "modifiedAt": "2026-05-21T15:14:18.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779376453536": {
+      "id": "send-gate-browser-send-gate-1779376453536",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779376453536.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779376453536.json",
+      "createdAt": "2026-05-21T15:14:13.536Z",
+      "modifiedAt": "2026-05-21T15:14:14.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779375718175": {
+      "id": "send-gate-browser-send-gate-1779375718175",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779375718175.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779375718175.json",
+      "createdAt": "2026-05-21T15:01:58.175Z",
+      "modifiedAt": "2026-05-21T15:02:00.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779375714664": {
+      "id": "send-gate-browser-send-gate-1779375714664",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779375714664.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779375714664.json",
+      "createdAt": "2026-05-21T15:01:54.664Z",
+      "modifiedAt": "2026-05-21T15:01:56.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779375668168": {
+      "id": "send-gate-browser-send-gate-1779375668168",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779375668168.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779375668168.json",
+      "createdAt": "2026-05-21T15:01:08.168Z",
+      "modifiedAt": "2026-05-21T15:01:10.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779375664541": {
+      "id": "send-gate-browser-send-gate-1779375664541",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779375664541.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779375664541.json",
+      "createdAt": "2026-05-21T15:01:04.541Z",
+      "modifiedAt": "2026-05-21T15:01:06.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779375410775": {
+      "id": "send-gate-browser-send-gate-1779375410775",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779375410775.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779375410775.json",
+      "createdAt": "2026-05-21T14:56:50.775Z",
+      "modifiedAt": "2026-05-21T14:56:52.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779375406860": {
+      "id": "send-gate-browser-send-gate-1779375406860",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779375406860.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779375406860.json",
+      "createdAt": "2026-05-21T14:56:46.860Z",
+      "modifiedAt": "2026-05-21T14:56:48.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779375138570": {
+      "id": "send-gate-browser-send-gate-1779375138570",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779375138570.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779375138570.json",
+      "createdAt": "2026-05-21T14:52:18.570Z",
+      "modifiedAt": "2026-05-21T14:52:20.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779375135268": {
+      "id": "send-gate-browser-send-gate-1779375135268",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779375135268.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779375135268.json",
+      "createdAt": "2026-05-21T14:52:15.268Z",
+      "modifiedAt": "2026-05-21T14:52:16.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779374899758": {
+      "id": "send-gate-browser-send-gate-1779374899758",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779374899758.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779374899758.json",
+      "createdAt": "2026-05-21T14:48:19.758Z",
+      "modifiedAt": "2026-05-21T14:48:20.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779374895785": {
+      "id": "send-gate-browser-send-gate-1779374895785",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779374895785.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779374895785.json",
+      "createdAt": "2026-05-21T14:48:15.785Z",
+      "modifiedAt": "2026-05-21T14:48:16.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779374754645": {
+      "id": "send-gate-browser-send-gate-1779374754645",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779374754645.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779374754645.json",
+      "createdAt": "2026-05-21T14:45:54.645Z",
+      "modifiedAt": "2026-05-21T14:45:56.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779374750282": {
+      "id": "send-gate-browser-send-gate-1779374750282",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779374750282.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779374750282.json",
+      "createdAt": "2026-05-21T14:45:50.282Z",
+      "modifiedAt": "2026-05-21T14:45:52.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779374603897": {
+      "id": "send-gate-browser-send-gate-1779374603897",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779374603897.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779374603897.json",
+      "createdAt": "2026-05-21T14:43:23.897Z",
+      "modifiedAt": "2026-05-21T14:43:24.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779374600052": {
+      "id": "send-gate-browser-send-gate-1779374600052",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779374600052.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779374600052.json",
+      "createdAt": "2026-05-21T14:43:20.052Z",
+      "modifiedAt": "2026-05-21T14:43:22.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779374370930": {
+      "id": "send-gate-browser-send-gate-1779374370930",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779374370930.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779374370930.json",
+      "createdAt": "2026-05-21T14:39:30.930Z",
+      "modifiedAt": "2026-05-21T14:39:32.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779374193697": {
+      "id": "send-gate-browser-send-gate-1779374193697",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779374193697.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779374193697.json",
+      "createdAt": "2026-05-21T14:36:33.697Z",
+      "modifiedAt": "2026-05-21T14:36:34.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779373982368": {
+      "id": "send-gate-browser-send-gate-1779373982368",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779373982368.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779373982368.json",
+      "createdAt": "2026-05-21T14:33:02.368Z",
+      "modifiedAt": "2026-05-21T14:33:04.000Z",
+      "metadata": {}
+    },
+    "send-gate-browser-send-gate-1779373713027": {
+      "id": "send-gate-browser-send-gate-1779373713027",
+      "type": "send_gate",
+      "label": "browser-send-gate-1779373713027.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\send-gates\\browser-send-gate-1779373713027.json",
+      "createdAt": "2026-05-21T14:28:33.027Z",
+      "modifiedAt": "2026-05-21T14:28:34.000Z",
+      "metadata": {}
+    },
+    "outbox-send-request-1779364088641": {
+      "id": "outbox-send-request-1779364088641",
+      "type": "outbox",
+      "label": "send-request-1779364088641.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\outbox\\send-request-1779364088641.json",
+      "createdAt": "2026-05-21T11:48:08.641Z",
+      "modifiedAt": "2026-05-21T11:48:10.000Z",
+      "metadata": {}
+    },
+    "outbox-send-request-1779362558299": {
+      "id": "outbox-send-request-1779362558299",
+      "type": "outbox",
+      "label": "send-request-1779362558299.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\outbox\\send-request-1779362558299.json",
+      "createdAt": "2026-05-21T11:22:38.299Z",
+      "modifiedAt": "2026-05-21T11:22:40.000Z",
+      "metadata": {}
+    },
+    "outbox-send-request-1779362411961": {
+      "id": "outbox-send-request-1779362411961",
+      "type": "outbox",
+      "label": "send-request-1779362411961.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\outbox\\send-request-1779362411961.json",
+      "createdAt": "2026-05-21T11:20:11.961Z",
+      "modifiedAt": "2026-05-21T11:20:12.000Z",
+      "metadata": {}
+    },
+    "outbox-send-request-1779362243761": {
+      "id": "outbox-send-request-1779362243761",
+      "type": "outbox",
+      "label": "send-request-1779362243761.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\outbox\\send-request-1779362243761.json",
+      "createdAt": "2026-05-21T11:17:23.761Z",
+      "modifiedAt": "2026-05-21T11:17:24.000Z",
+      "metadata": {}
+    },
+    "outbox-send-request-1779361381161": {
+      "id": "outbox-send-request-1779361381161",
+      "type": "outbox",
+      "label": "send-request-1779361381161.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\hermes\\outbox\\send-request-1779361381161.json",
+      "createdAt": "2026-05-21T11:03:01.161Z",
+      "modifiedAt": "2026-05-21T11:03:02.000Z",
+      "metadata": {}
+    },
+    "morning-morning-report-2026-05-22": {
+      "id": "morning-morning-report-2026-05-22",
+      "type": "morning_report",
+      "label": "morning-report-2026-05-22.json",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\runtime\\morning\\morning-report-2026-05-22.json",
+      "createdAt": "2026-05-22T07:29:33.555Z",
+      "modifiedAt": "2026-05-22T07:29:33.555Z",
+      "metadata": {
+        "overnightTotal": 0,
+        "applied": 0,
+        "failed": 0
+      }
+    },
+    "patch-fix-zeus-risk-formatting-1779349625787": {
+      "id": "patch-fix-zeus-risk-formatting-1779349625787",
+      "type": "patch_candidate",
+      "label": "fix-zeus-risk-formatting-1779349625787",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\patch-system\\patch-candidates\\fix-zeus-risk-formatting-1779349625787",
+      "createdAt": "2026-05-21T20:34:53.247Z",
+      "modifiedAt": "2026-05-21T20:34:53.247Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-health-check-1779452921675-clean": {
+      "id": "quarantine-zeus-health-check-1779452921675-clean",
+      "type": "quarantine_draft",
+      "label": "zeus-health-check-1779452921675.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-health-check-1779452921675.clean.ts",
+      "createdAt": "2026-05-22T12:28:44.504Z",
+      "modifiedAt": "2026-05-22T12:28:44.504Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-health-check-1779452921675-draft": {
+      "id": "quarantine-zeus-health-check-1779452921675-draft",
+      "type": "quarantine_draft",
+      "label": "zeus-health-check-1779452921675.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-health-check-1779452921675.draft.ts",
+      "createdAt": "2026-05-22T12:28:41.727Z",
+      "modifiedAt": "2026-05-22T12:28:41.727Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-health-check-1779451957991-clean": {
+      "id": "quarantine-zeus-health-check-1779451957991-clean",
+      "type": "quarantine_draft",
+      "label": "zeus-health-check-1779451957991.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-health-check-1779451957991.clean.ts",
+      "createdAt": "2026-05-22T12:12:40.167Z",
+      "modifiedAt": "2026-05-22T12:12:40.167Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-health-check-1779451957991-draft": {
+      "id": "quarantine-zeus-health-check-1779451957991-draft",
+      "type": "quarantine_draft",
+      "label": "zeus-health-check-1779451957991.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-health-check-1779451957991.draft.ts",
+      "createdAt": "2026-05-22T12:12:38.004Z",
+      "modifiedAt": "2026-05-22T12:12:38.004Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-health-check-1779451874909-clean": {
+      "id": "quarantine-zeus-health-check-1779451874909-clean",
+      "type": "quarantine_draft",
+      "label": "zeus-health-check-1779451874909.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-health-check-1779451874909.clean.ts",
+      "createdAt": "2026-05-22T12:11:17.316Z",
+      "modifiedAt": "2026-05-22T12:11:17.316Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-health-check-1779451874909-draft": {
+      "id": "quarantine-zeus-health-check-1779451874909-draft",
+      "type": "quarantine_draft",
+      "label": "zeus-health-check-1779451874909.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-health-check-1779451874909.draft.ts",
+      "createdAt": "2026-05-22T12:11:14.952Z",
+      "modifiedAt": "2026-05-22T12:11:14.952Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-health-check-1779451803009-clean": {
+      "id": "quarantine-zeus-health-check-1779451803009-clean",
+      "type": "quarantine_draft",
+      "label": "zeus-health-check-1779451803009.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-health-check-1779451803009.clean.ts",
+      "createdAt": "2026-05-22T12:10:05.517Z",
+      "modifiedAt": "2026-05-22T12:10:05.517Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-health-check-1779451803009-draft": {
+      "id": "quarantine-zeus-health-check-1779451803009-draft",
+      "type": "quarantine_draft",
+      "label": "zeus-health-check-1779451803009.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-health-check-1779451803009.draft.ts",
+      "createdAt": "2026-05-22T12:10:03.002Z",
+      "modifiedAt": "2026-05-22T12:10:03.002Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-health-check-1779451764957-draft": {
+      "id": "quarantine-zeus-health-check-1779451764957-draft",
+      "type": "quarantine_draft",
+      "label": "zeus-health-check-1779451764957.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-health-check-1779451764957.draft.ts",
+      "createdAt": "2026-05-22T12:09:24.959Z",
+      "modifiedAt": "2026-05-22T12:09:24.959Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-morning-report-draft-1779311574376-repaired-1779311795301repair-1779312075174-clean-ts": {
+      "id": "quarantine-zeus-morning-report-draft-1779311574376-repaired-1779311795301repair-1779312075174-clean-ts",
+      "type": "quarantine_draft",
+      "label": "zeus-morning-report-draft-1779311574376.repaired.1779311795301.tsrepair.1779312075174.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-morning-report-draft-1779311574376.repaired.1779311795301.tsrepair.1779312075174.clean.ts",
+      "createdAt": "2026-05-20T21:21:18.000Z",
+      "modifiedAt": "2026-05-20T21:21:18.000Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-morning-report-draft-1779311574376-repaired-1779311795301repair-1779312075174-draft-ts": {
+      "id": "quarantine-zeus-morning-report-draft-1779311574376-repaired-1779311795301repair-1779312075174-draft-ts",
+      "type": "quarantine_draft",
+      "label": "zeus-morning-report-draft-1779311574376.repaired.1779311795301.tsrepair.1779312075174.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-morning-report-draft-1779311574376.repaired.1779311795301.tsrepair.1779312075174.draft.ts",
+      "createdAt": "2026-05-20T21:21:16.000Z",
+      "modifiedAt": "2026-05-20T21:21:16.000Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-morning-report-draft-1779311574376-repaired-1779311795301-clean": {
+      "id": "quarantine-zeus-morning-report-draft-1779311574376-repaired-1779311795301-clean",
+      "type": "quarantine_draft",
+      "label": "zeus-morning-report-draft-1779311574376.repaired.1779311795301.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-morning-report-draft-1779311574376.repaired.1779311795301.clean.ts",
+      "createdAt": "2026-05-20T21:16:38.000Z",
+      "modifiedAt": "2026-05-20T21:16:38.000Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-morning-report-draft-1779311574376-repaired-1779311795301-draft": {
+      "id": "quarantine-zeus-morning-report-draft-1779311574376-repaired-1779311795301-draft",
+      "type": "quarantine_draft",
+      "label": "zeus-morning-report-draft-1779311574376.repaired.1779311795301.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-morning-report-draft-1779311574376.repaired.1779311795301.draft.ts",
+      "createdAt": "2026-05-20T21:16:36.000Z",
+      "modifiedAt": "2026-05-20T21:16:36.000Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-morning-report-draft-1779311574376-clean": {
+      "id": "quarantine-zeus-morning-report-draft-1779311574376-clean",
+      "type": "quarantine_draft",
+      "label": "zeus-morning-report-draft-1779311574376.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-morning-report-draft-1779311574376.clean.ts",
+      "createdAt": "2026-05-20T21:12:58.000Z",
+      "modifiedAt": "2026-05-20T21:12:58.000Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-morning-report-draft-1779311574376-draft": {
+      "id": "quarantine-zeus-morning-report-draft-1779311574376-draft",
+      "type": "quarantine_draft",
+      "label": "zeus-morning-report-draft-1779311574376.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-morning-report-draft-1779311574376.draft.ts",
+      "createdAt": "2026-05-20T21:12:56.000Z",
+      "modifiedAt": "2026-05-20T21:12:56.000Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-obsidian-sync-draft-1779310540526-clean": {
+      "id": "quarantine-zeus-obsidian-sync-draft-1779310540526-clean",
+      "type": "quarantine_draft",
+      "label": "zeus-obsidian-sync-draft-1779310540526.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-obsidian-sync-draft-1779310540526.clean.ts",
+      "createdAt": "2026-05-20T21:06:04.000Z",
+      "modifiedAt": "2026-05-20T21:06:04.000Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-obsidian-sync-draft-1779310540526-draft": {
+      "id": "quarantine-zeus-obsidian-sync-draft-1779310540526-draft",
+      "type": "quarantine_draft",
+      "label": "zeus-obsidian-sync-draft-1779310540526.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-obsidian-sync-draft-1779310540526.draft.ts",
+      "createdAt": "2026-05-20T20:55:42.000Z",
+      "modifiedAt": "2026-05-20T20:55:42.000Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-response-section-parser-1779309423635-clean": {
+      "id": "quarantine-zeus-response-section-parser-1779309423635-clean",
+      "type": "quarantine_draft",
+      "label": "zeus-response-section-parser-1779309423635.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-response-section-parser-1779309423635.clean.ts",
+      "createdAt": "2026-05-20T20:47:28.000Z",
+      "modifiedAt": "2026-05-20T20:47:28.000Z",
+      "metadata": {}
+    },
+    "quarantine-zeus-response-section-parser-1779309423635-draft": {
+      "id": "quarantine-zeus-response-section-parser-1779309423635-draft",
+      "type": "quarantine_draft",
+      "label": "zeus-response-section-parser-1779309423635.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\zeus-response-section-parser-1779309423635.draft.ts",
+      "createdAt": "2026-05-20T20:37:04.000Z",
+      "modifiedAt": "2026-05-20T20:37:04.000Z",
+      "metadata": {}
+    },
+    "quarantine-fix-zeus-risk-formatting-1779308282861repair-1779308898523-clean-ts": {
+      "id": "quarantine-fix-zeus-risk-formatting-1779308282861repair-1779308898523-clean-ts",
+      "type": "quarantine_draft",
+      "label": "fix-zeus-risk-formatting-1779308282861.tsrepair.1779308898523.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\fix-zeus-risk-formatting-1779308282861.tsrepair.1779308898523.clean.ts",
+      "createdAt": "2026-05-20T20:28:22.000Z",
+      "modifiedAt": "2026-05-20T20:28:22.000Z",
+      "metadata": {}
+    },
+    "quarantine-fix-zeus-risk-formatting-1779308282861repair-1779308898523-draft-ts": {
+      "id": "quarantine-fix-zeus-risk-formatting-1779308282861repair-1779308898523-draft-ts",
+      "type": "quarantine_draft",
+      "label": "fix-zeus-risk-formatting-1779308282861.tsrepair.1779308898523.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\fix-zeus-risk-formatting-1779308282861.tsrepair.1779308898523.draft.ts",
+      "createdAt": "2026-05-20T20:28:20.000Z",
+      "modifiedAt": "2026-05-20T20:28:20.000Z",
+      "metadata": {}
+    },
+    "quarantine-fix-zeus-risk-formatting-1779308282861-clean": {
+      "id": "quarantine-fix-zeus-risk-formatting-1779308282861-clean",
+      "type": "quarantine_draft",
+      "label": "fix-zeus-risk-formatting-1779308282861.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\fix-zeus-risk-formatting-1779308282861.clean.ts",
+      "createdAt": "2026-05-20T20:23:18.000Z",
+      "modifiedAt": "2026-05-20T20:23:18.000Z",
+      "metadata": {}
+    },
+    "quarantine-fix-zeus-risk-formatting-1779308282861-draft": {
+      "id": "quarantine-fix-zeus-risk-formatting-1779308282861-draft",
+      "type": "quarantine_draft",
+      "label": "fix-zeus-risk-formatting-1779308282861.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\fix-zeus-risk-formatting-1779308282861.draft.ts",
+      "createdAt": "2026-05-20T20:18:04.000Z",
+      "modifiedAt": "2026-05-20T20:18:04.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779307719705-clean": {
+      "id": "quarantine-memory-entity-deduplicator-1779307719705-clean",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779307719705.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779307719705.clean.ts",
+      "createdAt": "2026-05-20T20:08:44.000Z",
+      "modifiedAt": "2026-05-20T20:08:44.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779307719705-draft": {
+      "id": "quarantine-memory-entity-deduplicator-1779307719705-draft",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779307719705.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779307719705.draft.ts",
+      "createdAt": "2026-05-20T20:08:40.000Z",
+      "modifiedAt": "2026-05-20T20:08:40.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779307151681-clean": {
+      "id": "quarantine-memory-entity-deduplicator-1779307151681-clean",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779307151681.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779307151681.clean.ts",
+      "createdAt": "2026-05-20T19:59:16.000Z",
+      "modifiedAt": "2026-05-20T19:59:16.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779307151681-draft": {
+      "id": "quarantine-memory-entity-deduplicator-1779307151681-draft",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779307151681.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779307151681.draft.ts",
+      "createdAt": "2026-05-20T19:59:12.000Z",
+      "modifiedAt": "2026-05-20T19:59:12.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779306699425-clean": {
+      "id": "quarantine-memory-entity-deduplicator-1779306699425-clean",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779306699425.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779306699425.clean.ts",
+      "createdAt": "2026-05-20T19:51:44.000Z",
+      "modifiedAt": "2026-05-20T19:51:44.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779306699425-draft": {
+      "id": "quarantine-memory-entity-deduplicator-1779306699425-draft",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779306699425.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779306699425.draft.ts",
+      "createdAt": "2026-05-20T19:51:40.000Z",
+      "modifiedAt": "2026-05-20T19:51:40.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779277021267-clean": {
+      "id": "quarantine-memory-entity-deduplicator-1779277021267-clean",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779277021267.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779277021267.clean.ts",
+      "createdAt": "2026-05-20T11:37:04.000Z",
+      "modifiedAt": "2026-05-20T11:37:04.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779277021267-draft": {
+      "id": "quarantine-memory-entity-deduplicator-1779277021267-draft",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779277021267.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779277021267.draft.ts",
+      "createdAt": "2026-05-20T11:37:02.000Z",
+      "modifiedAt": "2026-05-20T11:37:02.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779276855844-clean": {
+      "id": "quarantine-memory-entity-deduplicator-1779276855844-clean",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779276855844.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779276855844.clean.ts",
+      "createdAt": "2026-05-20T11:34:20.000Z",
+      "modifiedAt": "2026-05-20T11:34:20.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779276855844-draft": {
+      "id": "quarantine-memory-entity-deduplicator-1779276855844-draft",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779276855844.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779276855844.draft.ts",
+      "createdAt": "2026-05-20T11:34:16.000Z",
+      "modifiedAt": "2026-05-20T11:34:16.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779276532668-clean": {
+      "id": "quarantine-memory-entity-deduplicator-1779276532668-clean",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779276532668.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779276532668.clean.ts",
+      "createdAt": "2026-05-20T11:28:56.000Z",
+      "modifiedAt": "2026-05-20T11:28:56.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779276532668-draft": {
+      "id": "quarantine-memory-entity-deduplicator-1779276532668-draft",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779276532668.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779276532668.draft.ts",
+      "createdAt": "2026-05-20T11:28:54.000Z",
+      "modifiedAt": "2026-05-20T11:28:54.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779276365768-clean": {
+      "id": "quarantine-memory-entity-deduplicator-1779276365768-clean",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779276365768.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779276365768.clean.ts",
+      "createdAt": "2026-05-20T11:26:10.000Z",
+      "modifiedAt": "2026-05-20T11:26:10.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779276365768-draft": {
+      "id": "quarantine-memory-entity-deduplicator-1779276365768-draft",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779276365768.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779276365768.draft.ts",
+      "createdAt": "2026-05-20T11:26:06.000Z",
+      "modifiedAt": "2026-05-20T11:26:06.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779274467348-clean": {
+      "id": "quarantine-memory-entity-deduplicator-1779274467348-clean",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779274467348.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779274467348.clean.ts",
+      "createdAt": "2026-05-20T10:54:32.000Z",
+      "modifiedAt": "2026-05-20T10:54:32.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779274467348-draft": {
+      "id": "quarantine-memory-entity-deduplicator-1779274467348-draft",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779274467348.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779274467348.draft.ts",
+      "createdAt": "2026-05-20T10:54:28.000Z",
+      "modifiedAt": "2026-05-20T10:54:28.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779272908983-clean": {
+      "id": "quarantine-memory-entity-deduplicator-1779272908983-clean",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779272908983.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779272908983.clean.ts",
+      "createdAt": "2026-05-20T10:28:32.000Z",
+      "modifiedAt": "2026-05-20T10:28:32.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779272908983-draft": {
+      "id": "quarantine-memory-entity-deduplicator-1779272908983-draft",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779272908983.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779272908983.draft.ts",
+      "createdAt": "2026-05-20T10:28:30.000Z",
+      "modifiedAt": "2026-05-20T10:28:30.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779272769053-clean": {
+      "id": "quarantine-memory-entity-deduplicator-1779272769053-clean",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779272769053.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779272769053.clean.ts",
+      "createdAt": "2026-05-20T10:26:12.000Z",
+      "modifiedAt": "2026-05-20T10:26:12.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779272769053-draft": {
+      "id": "quarantine-memory-entity-deduplicator-1779272769053-draft",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779272769053.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779272769053.draft.ts",
+      "createdAt": "2026-05-20T10:26:10.000Z",
+      "modifiedAt": "2026-05-20T10:26:10.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779271921628-repaired-1779272184375repair-1779272464899-clean-ts": {
+      "id": "quarantine-memory-entity-deduplicator-1779271921628-repaired-1779272184375repair-1779272464899-clean-ts",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779271921628.repaired.1779272184375.tsrepair.1779272464899.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779271921628.repaired.1779272184375.tsrepair.1779272464899.clean.ts",
+      "createdAt": "2026-05-20T10:21:08.000Z",
+      "modifiedAt": "2026-05-20T10:21:08.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779271921628-repaired-1779272184375repair-1779272464899-draft-ts": {
+      "id": "quarantine-memory-entity-deduplicator-1779271921628-repaired-1779272184375repair-1779272464899-draft-ts",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779271921628.repaired.1779272184375.tsrepair.1779272464899.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779271921628.repaired.1779272184375.tsrepair.1779272464899.draft.ts",
+      "createdAt": "2026-05-20T10:21:06.000Z",
+      "modifiedAt": "2026-05-20T10:21:06.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779271921628-repaired-1779272184375-clean": {
+      "id": "quarantine-memory-entity-deduplicator-1779271921628-repaired-1779272184375-clean",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779271921628.repaired.1779272184375.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779271921628.repaired.1779272184375.clean.ts",
+      "createdAt": "2026-05-20T10:16:28.000Z",
+      "modifiedAt": "2026-05-20T10:16:28.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779271921628-repaired-1779272184375-draft": {
+      "id": "quarantine-memory-entity-deduplicator-1779271921628-repaired-1779272184375-draft",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779271921628.repaired.1779272184375.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779271921628.repaired.1779272184375.draft.ts",
+      "createdAt": "2026-05-20T10:16:26.000Z",
+      "modifiedAt": "2026-05-20T10:16:26.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779271921628-clean": {
+      "id": "quarantine-memory-entity-deduplicator-1779271921628-clean",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779271921628.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779271921628.clean.ts",
+      "createdAt": "2026-05-20T10:12:04.000Z",
+      "modifiedAt": "2026-05-20T10:12:04.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779271921628-draft": {
+      "id": "quarantine-memory-entity-deduplicator-1779271921628-draft",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779271921628.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779271921628.draft.ts",
+      "createdAt": "2026-05-20T10:12:02.000Z",
+      "modifiedAt": "2026-05-20T10:12:02.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779271152028-repaired-1779271339615-clean": {
+      "id": "quarantine-memory-entity-deduplicator-1779271152028-repaired-1779271339615-clean",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779271152028.repaired.1779271339615.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779271152028.repaired.1779271339615.clean.ts",
+      "createdAt": "2026-05-20T10:02:22.000Z",
+      "modifiedAt": "2026-05-20T10:02:22.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779271152028-repaired-1779271339615-draft": {
+      "id": "quarantine-memory-entity-deduplicator-1779271152028-repaired-1779271339615-draft",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779271152028.repaired.1779271339615.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779271152028.repaired.1779271339615.draft.ts",
+      "createdAt": "2026-05-20T10:02:20.000Z",
+      "modifiedAt": "2026-05-20T10:02:20.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779271152028-clean": {
+      "id": "quarantine-memory-entity-deduplicator-1779271152028-clean",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779271152028.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779271152028.clean.ts",
+      "createdAt": "2026-05-20T09:59:16.000Z",
+      "modifiedAt": "2026-05-20T09:59:16.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779271152028-draft": {
+      "id": "quarantine-memory-entity-deduplicator-1779271152028-draft",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779271152028.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779271152028.draft.ts",
+      "createdAt": "2026-05-20T09:59:14.000Z",
+      "modifiedAt": "2026-05-20T09:59:14.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779268169075-repaired-1779269232480repair-1779269682303-clean-ts": {
+      "id": "quarantine-memory-entity-deduplicator-1779268169075-repaired-1779269232480repair-1779269682303-clean-ts",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779268169075.repaired.1779269232480.tsrepair.1779269682303.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779268169075.repaired.1779269232480.tsrepair.1779269682303.clean.ts",
+      "createdAt": "2026-05-20T09:42:22.000Z",
+      "modifiedAt": "2026-05-20T09:42:22.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779268169075-repaired-1779269232480repair-1779269682303-draft-ts": {
+      "id": "quarantine-memory-entity-deduplicator-1779268169075-repaired-1779269232480repair-1779269682303-draft-ts",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779268169075.repaired.1779269232480.tsrepair.1779269682303.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779268169075.repaired.1779269232480.tsrepair.1779269682303.draft.ts",
+      "createdAt": "2026-05-20T09:34:44.000Z",
+      "modifiedAt": "2026-05-20T09:34:44.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779268169075-repaired-1779269232480repair-1779269526470-draft-ts": {
+      "id": "quarantine-memory-entity-deduplicator-1779268169075-repaired-1779269232480repair-1779269526470-draft-ts",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779268169075.repaired.1779269232480.tsrepair.1779269526470.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779268169075.repaired.1779269232480.tsrepair.1779269526470.draft.ts",
+      "createdAt": "2026-05-20T09:32:08.000Z",
+      "modifiedAt": "2026-05-20T09:32:08.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779268169075-repaired-1779269232480-clean": {
+      "id": "quarantine-memory-entity-deduplicator-1779268169075-repaired-1779269232480-clean",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779268169075.repaired.1779269232480.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779268169075.repaired.1779269232480.clean.ts",
+      "createdAt": "2026-05-20T09:27:16.000Z",
+      "modifiedAt": "2026-05-20T09:27:16.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779268169075-repaired-1779269232480-draft": {
+      "id": "quarantine-memory-entity-deduplicator-1779268169075-repaired-1779269232480-draft",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779268169075.repaired.1779269232480.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779268169075.repaired.1779269232480.draft.ts",
+      "createdAt": "2026-05-20T09:27:14.000Z",
+      "modifiedAt": "2026-05-20T09:27:14.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779268169075-clean": {
+      "id": "quarantine-memory-entity-deduplicator-1779268169075-clean",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779268169075.clean.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779268169075.clean.ts",
+      "createdAt": "2026-05-20T09:21:56.000Z",
+      "modifiedAt": "2026-05-20T09:21:56.000Z",
+      "metadata": {}
+    },
+    "quarantine-memory-entity-deduplicator-1779268169075-draft": {
+      "id": "quarantine-memory-entity-deduplicator-1779268169075-draft",
+      "type": "quarantine_draft",
+      "label": "memory-entity-deduplicator-1779268169075.draft.ts",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\build-system\\quarantine\\memory-entity-deduplicator-1779268169075.draft.ts",
+      "createdAt": "2026-05-20T09:09:30.000Z",
+      "modifiedAt": "2026-05-20T09:09:30.000Z",
+      "metadata": {}
+    },
+    "obj-obj-1779458247777-gg0rgg": {
+      "id": "obj-obj-1779458247777-gg0rgg",
+      "type": "objective",
+      "label": "Implement Hestia Memory Governance",
+      "sourcePath": "E:\\ZEUS\\founder-command-center\\olympus\\hestia\\objectives\\obj-1779458247777-gg0rgg.json",
+      "createdAt": "2026-05-22T13:57:27.777Z",
+      "modifiedAt": "2026-05-22T13:57:27.778Z",
+      "metadata": {}
+    }
+  },
+  "edges": [
+    {
+      "source": "task-zeus-health-check",
+      "target": "build-1779452843942",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779452843942",
+      "target": "task-zeus-health-check",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-zeus-health-check",
+      "target": "build-1779451929349",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779451929349",
+      "target": "task-zeus-health-check",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-zeus-health-check",
+      "target": "build-1779451847921",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779451847921",
+      "target": "task-zeus-health-check",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-zeus-health-check",
+      "target": "build-1779451773160",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779451773160",
+      "target": "task-zeus-health-check",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-zeus-response-section-parser",
+      "target": "build-1779434936528",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779434936528",
+      "target": "task-zeus-response-section-parser",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-zeus-morning-report-draft",
+      "target": "build-1779311470542",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779311470542",
+      "target": "task-zeus-morning-report-draft",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-zeus-obsidian-sync-draft",
+      "target": "build-1779310354928",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779310354928",
+      "target": "task-zeus-obsidian-sync-draft",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-zeus-response-section-parser",
+      "target": "build-1779309209270",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779309209270",
+      "target": "task-zeus-response-section-parser",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-fix-zeus-risk-formatting",
+      "target": "build-1779308146763",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779308146763",
+      "target": "task-fix-zeus-risk-formatting",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-memory-entity-deduplicator",
+      "target": "build-1779307554495",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779307554495",
+      "target": "task-memory-entity-deduplicator",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-memory-entity-deduplicator",
+      "target": "build-1779307086049",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779307086049",
+      "target": "task-memory-entity-deduplicator",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-memory-entity-deduplicator",
+      "target": "build-1779306546370",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779306546370",
+      "target": "task-memory-entity-deduplicator",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-memory-entity-deduplicator",
+      "target": "build-1779276938035",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779276938035",
+      "target": "task-memory-entity-deduplicator",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-memory-entity-deduplicator",
+      "target": "build-1779276806140",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779276806140",
+      "target": "task-memory-entity-deduplicator",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-memory-entity-deduplicator",
+      "target": "build-1779276440387",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779276440387",
+      "target": "task-memory-entity-deduplicator",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-memory-entity-deduplicator",
+      "target": "build-1779276189969",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779276189969",
+      "target": "task-memory-entity-deduplicator",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-memory-entity-deduplicator",
+      "target": "build-1779274263673",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779274263673",
+      "target": "task-memory-entity-deduplicator",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-memory-entity-deduplicator",
+      "target": "build-1779274121243",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779274121243",
+      "target": "task-memory-entity-deduplicator",
+      "relation": "referenced",
+      "weight": 1
+    },
+    {
+      "source": "task-memory-entity-deduplicator",
+      "target": "build-1779273802501",
+      "relation": "triggered",
+      "weight": 1
+    },
+    {
+      "source": "build-1779273802501",
+      "target": "task-memory-entity-deduplicator",
+      "relation": "referenced",
+      "weight": 1
+    }
+  ],
+  "updatedAt": "2026-05-22T13:58:44.162Z"
+}

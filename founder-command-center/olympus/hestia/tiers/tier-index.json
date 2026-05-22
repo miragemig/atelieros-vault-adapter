@@ -1,0 +1,22 @@
+{
+  "records": [],
+  "updatedAt": "2026-05-22T14:15:34.253Z",
+  "stats": {
+    "hot": {
+      "count": 0,
+      "sizeBytes": 0
+    },
+    "operational": {
+      "count": 0,
+      "sizeBytes": 0
+    },
+    "archive": {
+      "count": 0,
+      "sizeBytes": 0
+    },
+    "immutable": {
+      "count": 0,
+      "sizeBytes": 0
+    }
+  }
+}

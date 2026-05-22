@@ -90,6 +90,28 @@ function getLatestOvernightReport(): any | null {
   }
 }
 
+function getLatestBuildReport(): any | null {
+  try {
+    const reportsDir = path.join(root, "founder-command-center", "build-system", "reports");
+    if (!fs.existsSync(reportsDir)) return null;
+
+    const files = fs
+      .readdirSync(reportsDir)
+      .filter((f) => f.endsWith(".json"))
+      .map((f) => ({
+        name: f,
+        path: path.join(reportsDir, f),
+        time: fs.statSync(path.join(reportsDir, f)).mtimeMs
+      }))
+      .sort((a, b) => b.time - a.time);
+
+    if (files.length === 0) return null;
+    return JSON.parse(fs.readFileSync(files[0].path, "utf-8"));
+  } catch {
+    return null;
+  }
+}
+
 function getGitState() {
   try {
     const { execSync } = require("child_process");
@@ -135,19 +157,32 @@ function getHermesOutboxCount(): number {
 
 function generateMorningReport(): MorningReport {
   const overnightReport = getLatestOvernightReport();
+  const latestBuildReport = getLatestBuildReport();
   const gitState = getGitState();
   
-  const attempted = overnightReport?.cycles?.map((cycle: any) => ({
+  const attempted = (overnightReport?.cycles || []).map((cycle: any) => ({
     taskId: cycle.selectedTaskId || "none",
     taskTitle: cycle.selectedTaskId || "task selection",
     startedAt: cycle.startedAt,
-    status: cycle.outcome === "build_applied_autonomously" ? "applied" : 
-            cycle.outcome === "build_failed" ? "failed" : "skipped",
-    reason: cycle.outcome === "skipped_git_dirty" ? "git state not clean" :
-            cycle.outcome === "no_queued_tasks" ? "no tasks in queue" :
-            cycle.outcome === "selection_failed" ? "task selection failed" :
-            cycle.outcome === "build_failed" ? "build failed" : undefined
-  })) || [];
+    status:
+      cycle.outcome === "build_applied_autonomously" ? "applied" :
+      cycle.outcome === "build_failed" ? "failed" : "skipped",
+    reason:
+      cycle.outcome === "skipped_git_dirty" ? "git state not clean" :
+      cycle.outcome === "no_queued_tasks" ? "no tasks in queue" :
+      cycle.outcome === "selection_failed" ? "task selection failed" :
+      cycle.outcome === "build_failed" ? "build failed" : undefined
+  }));
+
+  if (!overnightReport && latestBuildReport) {
+    attempted.push({
+      taskId: latestBuildReport.taskId || "unknown",
+      taskTitle: latestBuildReport.taskTitle || "unknown",
+      startedAt: latestBuildReport.createdAt || new Date().toISOString(),
+      status: latestBuildReport.status === "pass" ? "applied" : "failed",
+      reason: latestBuildReport.status === "fail" ? "build pipeline failed" : undefined
+    });
+  }
 
   const report: MorningReport = {
     system: "ZEUS",
@@ -168,15 +203,17 @@ function generateMorningReport(): MorningReport {
     
     attempted,
     
-    applied: attempted
-      .filter((a) => a.status === "applied")
-      .map((a, idx) => ({
-        candidateId: `candidate-${idx}`,
-        taskId: a.taskId,
-        destinationPath: "core-local",
-        appliedAt: a.startedAt,
-        requiresReview: true
-      })) || [],
+    applied: overnightReport
+      ? attempted
+          .filter((a) => a.status === "applied")
+          .map((a, idx) => ({
+            candidateId: `candidate-${idx}`,
+            taskId: a.taskId,
+            destinationPath: "core-local",
+            appliedAt: a.startedAt,
+            requiresReview: true
+          }))
+      : [],
     
     failed: attempted
       .filter((a) => a.status === "failed")
@@ -212,7 +249,11 @@ function generateMorningReport(): MorningReport {
       }
     ],
     
-    auditPath: overnightReport?.cycles?.[0]?.logFile || "unknown"
+    auditPath:
+      overnightReport?.cycles?.[0]?.logFile ||
+      latestBuildReport?.finalCandidatePath ||
+      latestBuildReport?.createdAt ||
+      "unknown"
   };
   
   return report;

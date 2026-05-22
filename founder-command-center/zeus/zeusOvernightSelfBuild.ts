@@ -19,6 +19,7 @@ type CycleResult = {
   startedAt: string;
   finishedAt: string;
   selectedTaskId: string | null;
+  logFile: string;
   outcome:
     | "skipped_git_dirty"
     | "no_queued_tasks"
@@ -446,6 +447,7 @@ function main() {
       startedAt: cycleStart.toISOString(),
       finishedAt: new Date().toISOString(),
       selectedTaskId,
+      logFile,
       outcome,
       notes
     };

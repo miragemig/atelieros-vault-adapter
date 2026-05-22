@@ -1,0 +1,35 @@
+{
+  "entities": [
+    {
+      "canonicalId": "canon-memory-entity-deduplicator",
+      "canonicalName": "Memory Entity Deduplicator",
+      "entityType": "module",
+      "aliases": [
+        "Memory Entity Deduplicator",
+        "memory entity deduplicator",
+        "memory-entity-deduplicator",
+        "memory_entity_deduplicator",
+        "memoryentitydeduplicator",
+        "memoryEntityDeduplicator",
+        "MemoryEntityDeduplicator"
+      ],
+      "createdAt": "2026-05-22T14:15:12.680Z",
+      "updatedAt": "2026-05-22T14:15:12.680Z",
+      "linkedEntityIds": [],
+      "tags": [
+        "memory",
+        "dedup",
+        "governance"
+      ],
+      "description": "",
+      "status": "active"
+    }
+  ],
+  "aliasIndex": {
+    "memory entity deduplicator": "canon-memory-entity-deduplicator",
+    "memory-entity-deduplicator": "canon-memory-entity-deduplicator",
+    "memory_entity_deduplicator": "canon-memory-entity-deduplicator",
+    "memoryentitydeduplicator": "canon-memory-entity-deduplicator"
+  },
+  "updatedAt": "2026-05-22T14:15:12.681Z"
+}

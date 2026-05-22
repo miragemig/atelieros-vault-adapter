@@ -1,0 +1,11 @@
+{
+  "id": "obj-1779458247777-gg0rgg",
+  "createdAt": "2026-05-22T13:57:27.777Z",
+  "updatedAt": "2026-05-22T13:57:27.778Z",
+  "title": "Implement Hestia Memory Governance",
+  "description": "Build the complete Hestia operational memory system with session continuity, entity graph, governance, and timeline intelligence",
+  "status": "active",
+  "priority": "critical",
+  "tags": [],
+  "notes": []
+}
