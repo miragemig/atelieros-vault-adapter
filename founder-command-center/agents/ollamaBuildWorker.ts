@@ -1,13 +1,16 @@
 import fs from "fs";
 import path from "path";
 import { generateWithOllama } from "../providers/ollamaProvider";
+import { generateWithDeepSeek } from "../providers/deepseekProvider";
 import { assertZeroCost } from "../governance/zeroCostGuard";
+import { loadModelProviders } from "../providers/providerResolver";
 
 type BuildTask = {
   id: string;
   title: string;
   model: string;
   provider: string;
+  providerSpec?: string;
   mayGenerateCost: boolean;
   maxAttempts: number;
   requirements: string[];
@@ -83,7 +86,7 @@ function createPrompt(task: BuildTask) {
   ].join("\n");
 }
 
-async function runOllamaBuildWorker() {
+async function generate() {
   const task = loadBuildTask();
 
   const costDecision = assertZeroCost({
@@ -97,30 +100,50 @@ async function runOllamaBuildWorker() {
 
   fs.mkdirSync(quarantinePath, { recursive: true });
 
-  const model = process.env.OLLAMA_MODEL || task.model;
+  // Resolve provider from task.providerSpec or use defaultLocal
+  const providers = loadModelProviders();
+  const providerSpec = task.providerSpec || providers.defaultLocal;
+  const isCloudProvider = providerSpec.startsWith("deepseek:");
 
-  const system = [
-    "You are a local ZEUS build worker.",
-    "Rules:",
-    "- zero additional cost",
-    "- use only local Ollama",
-    "- do not suggest paid APIs",
-    "- do not modify real project files",
-    "- generate code as a draft only",
-    "- output TypeScript only",
-    "- no markdown fences"
-  ].join("\n");
+  const system = isCloudProvider
+    ? [
+        "You are a ZEUS build worker.",
+        "Rules:",
+        "- generate TypeScript code only",
+        "- do not modify real project files",
+        "- output code as a draft only",
+        "- no markdown fences"
+      ].join("\n")
+    : [
+        "You are a local ZEUS build worker.",
+        "Rules:",
+        "- zero additional cost",
+        "- use only local Ollama",
+        "- do not suggest paid APIs",
+        "- do not modify real project files",
+        "- generate code as a draft only",
+        "- output TypeScript only",
+        "- no markdown fences"
+      ].join("\n");
 
   const prompt = createPrompt(task);
 
-  log(`Starting Ollama build worker with model: ${model}`);
-  log(`Task: ${task.id} — ${task.title}`);
+  let output: string;
 
-  const output = await generateWithOllama({
-    model,
-    system,
-    prompt
-  });
+  if (isCloudProvider) {
+    log(`Using DeepSeek provider (${providerSpec})`);
+    log(`Task: ${task.id} — ${task.title}`);
+    output = await generateWithDeepSeek({
+      model: providerSpec,
+      system,
+      prompt
+    });
+  } else {
+    const model = process.env.OLLAMA_MODEL || task.model;
+    log(`Starting Ollama build worker with model: ${model}`);
+    log(`Task: ${task.id} — ${task.title}`);
+    output = await generateWithOllama({ model, system, prompt });
+  }
 
   const fileName = `${safeFileName(task.id)}-${Date.now()}.draft.ts`;
   const outputPath = path.join(quarantinePath, fileName);
@@ -130,8 +153,8 @@ async function runOllamaBuildWorker() {
   log(`Generated quarantine draft: ${outputPath}`);
 }
 
-runOllamaBuildWorker().catch((error) => {
+generate().catch((error) => {
   const message = error instanceof Error ? error.message : String(error);
-  log(`Ollama build worker failed: ${message}`);
+  log(`Build worker failed: ${message}`);
   process.exit(1);
 });

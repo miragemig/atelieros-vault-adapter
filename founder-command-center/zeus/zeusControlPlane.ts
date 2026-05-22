@@ -282,11 +282,15 @@ export function collectGatewayState(): ZeusGatewayState {
   const recentEvents = readRecentEvents(1);
   const latestDoctorReport = getLatestDoctorReportPath();
 
+  // Preserve persisted mode — only default to DELIBERATION_ONLY if no state exists
+  const existingState = readGatewayState();
+  const persistedMode = existingState?.mode ?? "DELIBERATION_ONLY";
+
   const baseState = {
     system: "ZEUS" as const,
     version: "0.2",
     updatedAt: new Date().toISOString(),
-    mode: "DELIBERATION_ONLY" as const,
+    mode: persistedMode,
     session: {
       mainSession: "miguel-primary",
       currentFocus: getCurrentFocus(build)

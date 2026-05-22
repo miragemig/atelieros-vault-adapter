@@ -198,7 +198,8 @@ function main() {
   console.log("");
   console.log("Miguel: Supreme Tribunal");
   console.log("ZEUS: Sovereign judge-orchestrator");
-  console.log("Mode: DELIBERATION_ONLY / APPROVAL_GATED");
+  const gwMode = gatewayState?.mode || "DELIBERATION_ONLY";
+  console.log(`Mode: ${gwMode} / APPROVAL_GATED`);
 
   printHeader("CONTROL PLANE");
   console.log(`Updated at: ${gatewayState.updatedAt}`);

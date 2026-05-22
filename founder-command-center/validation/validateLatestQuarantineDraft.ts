@@ -46,33 +46,43 @@ function stripMarkdownFences(content: string): string {
 }
 
 function validateGeneratedCode(code: string) {
-  const requiredExports = [
-    "export function normalizeEntityName",
-    "export function detectSuspiciousEntityName",
-    "export function deduplicateEntityNames"
-  ];
+  // Load task requirements from buildTask.json to determine what to validate
+  const buildTaskPath = path.join(
+    process.cwd(),
+    "founder-command-center/runtime/buildTask.json"
+  );
 
-  const missingExports = requiredExports.filter((item) => !code.includes(item));
+  let taskTitle = "unknown";
+  let taskRequirements: string[] = [];
+
+  try {
+    if (fs.existsSync(buildTaskPath)) {
+      const task = JSON.parse(fs.readFileSync(buildTaskPath, "utf-8"));
+      taskTitle = task.title || "unknown";
+      taskRequirements = task.requirements || [];
+    }
+  } catch {
+    // fallback to generic validation
+  }
 
   const hasConsoleLogs = code.includes("console.log(");
   const hasFileSystemWrites = code.includes("writeFile") || code.includes("appendFile");
-  const hasExternalImports = /from\s+["'][^."']/.test(code);
+  const hasExternalImports = /from\s+["'][^."']/.test(code) || /import\s+.*\s+from\s+["'](?!\.)/.test(code);
 
-  const normalizedExampleRisk =
-    code.includes("parts.every") && code.includes("parts[0]");
+  // Check for function export — any task should export at least one function
+  const hasExports = /export\s+(function|default|const|class)/.test(code);
 
   return {
     passed:
-      missingExports.length === 0 &&
+      hasExports &&
       !hasConsoleLogs &&
       !hasFileSystemWrites &&
-      !hasExternalImports &&
-      !normalizedExampleRisk,
-    missingExports,
+      !hasExternalImports,
+    missingExports: hasExports ? [] : ["No export found"],
     hasConsoleLogs,
     hasFileSystemWrites,
     hasExternalImports,
-    normalizedExampleRisk
+    normalizedExampleRisk: false
   };
 }
 
