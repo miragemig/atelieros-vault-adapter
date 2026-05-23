@@ -66,3 +66,5 @@ founder-command-center/hermes/simple-send-log/*.json
 founder-command-center/zeus-runtime/logs/*.json
 founder-command-center/zeus-runtime/logs/*.json
 founder-command-center/zeus-runtime/logs/*.json
+
+founder-command-center/runtime/reports/overnight/
