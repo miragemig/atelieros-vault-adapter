@@ -1,6 +1,6 @@
 ﻿import fs from "fs";
 import path from "path";
-import { execSync } from "child_process";
+import { spawnSync } from "child_process";
 
 const ROOT = "G:\\ZEUS";
 const VAULT_PATH = process.env.ZEUS_VAULT_PATH || "G:\\ZEUS-VAULT";
@@ -90,14 +90,28 @@ function retrieveContext(query: string): string {
 }
 
 function runOllama(prompt: string): string {
-  const safePrompt = prompt.replace(/"/g, '\\"');
-
-  return execSync(`ollama run ${MODEL} "${safePrompt}"`, {
+  const result = spawnSync("ollama", ["run", MODEL, prompt], {
     cwd: ROOT,
     encoding: "utf8",
-    stdio: "pipe",
-    maxBuffer: 1024 * 1024 * 10
+    maxBuffer: 1024 * 1024 * 20
   });
+
+  const stdout = result.stdout || "";
+  const stderr = result.stderr || "";
+
+  if (result.error) {
+    return `OLLAMA ERROR: ${result.error.message}`;
+  }
+
+  if (result.status !== 0) {
+    return [
+      `OLLAMA EXIT CODE: ${result.status}`,
+      stderr || "(no stderr)",
+      stdout || "(no stdout)"
+    ].join("\n");
+  }
+
+  return stdout.trim() || stderr.trim() || "(empty ollama response)";
 }
 
 function main() {
@@ -119,6 +133,7 @@ REGRAS:
 - Não uses conhecimento genérico sobre projetos chamados Zeus.
 - Se o contexto for insuficiente, diz explicitamente: "Contexto insuficiente no Vault."
 - Responde de forma curta, direta e operacional.
+- Usa bullets quando ajudar.
 
 CONTEXTO DO VAULT:
 ${context || "(sem contexto encontrado)"}
@@ -134,6 +149,7 @@ RESPOSTA:
   console.log(`Vault: ${VAULT_PATH}`);
   console.log(`Context chars: ${context.length}`);
   console.log("");
+  console.log("=== ANSWER ===");
 
   const answer = runOllama(prompt);
   console.log(answer);
