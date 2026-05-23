@@ -26,7 +26,8 @@ const ALLOWED_PREFIXES = [
   "npm run zeus:hestia-sections",
   "npm run zeus:hestia-graph",
   "npm run zeus:handoff",
-  "npm run zeus:vault-normalize"
+  "npm run zeus:vault-normalize",
+  "npm run zeus:status"
 ];
 
 function loadQueue() {
@@ -34,7 +35,8 @@ function loadQueue() {
     throw new Error(`Task queue not found: ${QUEUE_PATH}`);
   }
 
-  return JSON.parse(fs.readFileSync(QUEUE_PATH, "utf8").replace(/^\uFEFF/, ""));
+  const raw = fs.readFileSync(QUEUE_PATH, "utf8").replace(/^\uFEFF/, "");
+  return JSON.parse(raw);
 }
 
 function isAllowed(command: string): boolean {
