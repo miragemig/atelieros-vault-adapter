@@ -1,0 +1,32 @@
+{
+  "version": "0.1.0",
+  "tasks": [
+    {
+      "id": "validate-hestia-search",
+      "status": "completed",
+      "type": "validation",
+      "goal": "Validate that zeus:hestia-search works against the active vault",
+      "createdAt": "2026-05-23T00:00:00.000Z",
+      "startedAt": "2026-05-23T14:20:00.368Z",
+      "completedAt": "2026-05-23T14:20:02.638Z",
+      "allowedFiles": [
+        "package.json",
+        "founder-command-center/runtime/memory/retrieveVaultContext.ts"
+      ],
+      "commands": [
+        "npm run zeus:hestia-search \"Olympus\"",
+        "npm run zeus:hestia-search \"Hestia\"",
+        "npm run zeus:hestia-search \"Provider Layer\"",
+        "npm run zeus:hestia-search \"nonexistent-query-test\""
+      ],
+      "successCriteria": [
+        "command exits with code 0",
+        "searched vault path is G:\\ZEUS-VAULT",
+        "markdown files scanned is greater than 0",
+        "no corrupted path appears",
+        "no G:\\ZEUS\\Vaul appears"
+      ],
+      "report": "G:\\ZEUS\\founder-command-center\\runtime\\reports\\auto\\validate-hestia-search-1779546002638.md"
+    }
+  ]
+}

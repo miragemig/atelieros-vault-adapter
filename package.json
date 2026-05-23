@@ -47,7 +47,9 @@
     "zeus:files": "tsx founder-command-center/zeus/zeusCommandRouter.ts files",
     "zeus:browser": "tsx founder-command-center/zeus/zeusCommandRouter.ts browser",
     "zeus:review": "tsx founder-command-center/zeus/zeusCommandRouter.ts review",
-    "zeus:set-mode": "tsx founder-command-center/zeus/zeusCommandRouter.ts set-mode"
+    "zeus:set-mode": "tsx founder-command-center/zeus/zeusCommandRouter.ts set-mode",
+    "zeus:hestia-search": "tsx founder-command-center/runtime/memory/retrieveVaultContext.ts",
+    "zeus:auto": "tsx founder-command-center/runtime/auto/zeusAutoRunner.ts"
   },
   "keywords": [],
   "author": "",
