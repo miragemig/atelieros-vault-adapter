@@ -39,6 +39,32 @@ function countMarkdownFiles(dir: string): number {
   return count;
 }
 
+function getQueueSummary(): string {
+  const queuePath = path.join(REPO_PATH, "founder-command-center", "runtime", "queue", "tasks.json");
+
+  if (!fs.existsSync(queuePath)) {
+    return "Queue not found.";
+  }
+
+  try {
+    const raw = fs.readFileSync(queuePath, "utf8").replace(/^\uFEFF/, "");
+    const queue = JSON.parse(raw);
+    const tasks = queue.tasks || [];
+
+    const lines: string[] = [];
+    lines.push(`Total tasks: ${tasks.length}`);
+
+    for (const task of tasks) {
+      lines.push(`- ${task.id} [${task.status}] ${task.goal}`);
+      if (task.report) lines.push(`  Report: ${task.report}`);
+    }
+
+    return lines.join("\n");
+  } catch (err: any) {
+    return `Queue parse error: ${err.message}`;
+  }
+}
+
 function main() {
   const dir = path.join(VAULT_PATH, "30-hestia-memory", "handoffs");
   fs.mkdirSync(dir, { recursive: true });
@@ -49,6 +75,7 @@ function main() {
   const gitLog = run("git log --oneline -5");
   const scripts = run("npm run --silent");
   const markdownCount = countMarkdownFiles(VAULT_PATH);
+  const queueSummary = getQueueSummary();
 
   const content = `---
 type: zeus-handoff
@@ -85,6 +112,12 @@ ${gitLog}
 ${gitStatus || "clean"}
 \`\`\`
 
+## Queue State
+
+\`\`\`text
+${queueSummary}
+\`\`\`
+
 ## Available ZEUS Scripts
 
 \`\`\`text
@@ -99,17 +132,22 @@ Current ZEUS runtime has:
 - Hestia context builder
 - Hestia brief/context compression
 - Hestia section retrieval
-- ZEUS_AUTO v0
+- Hestia entity graph
 - Hestia memory writer
 - Hestia handoff generator
+- ZEUS_AUTO v0
+- Policy gate
+- Task planner
+- Task generation
+- Queue status
+- SAFE_OVERNIGHT_MODE
 
 ## Next Recommended Actions
 
 1. Improve retrieval quality by filtering malformed vault notes.
-2. Add graph/entity extraction.
-3. Add local model context injection.
-4. Add SAFE_OVERNIGHT_MODE task queue.
-5. Keep runtime local-first and zero-cost.
+2. Add local model context injection.
+3. Add SAFE_OVERNIGHT_MODE queue integration.
+4. Keep runtime local-first and zero-cost.
 
 ## Related
 
