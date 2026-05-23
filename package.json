@@ -53,7 +53,9 @@
     "zeus:hestia-context": "tsx founder-command-center/runtime/memory/buildContext.ts",
     "zeus:hestia-brief": "tsx founder-command-center/runtime/memory/buildBrief.ts",
     "zeus:hestia-sanitize": "tsx founder-command-center/runtime/memory/sanitizeVault.ts",
-    "zeus:hestia-sections": "tsx founder-command-center/runtime/memory/buildSections.ts"
+    "zeus:hestia-sections": "tsx founder-command-center/runtime/memory/buildSections.ts",
+    "zeus:hestia-write": "tsx founder-command-center/runtime/memory/writeMemory.ts",
+    "zeus:handoff": "tsx founder-command-center/runtime/memory/handoff.ts"
   },
   "keywords": [],
   "author": "",
