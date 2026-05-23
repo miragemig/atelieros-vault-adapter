@@ -51,7 +51,8 @@
     "zeus:hestia-search": "tsx founder-command-center/runtime/memory/retrieveVaultContext.ts",
     "zeus:auto": "tsx founder-command-center/runtime/auto/zeusAutoRunner.ts",
     "zeus:hestia-context": "tsx founder-command-center/runtime/memory/buildContext.ts",
-    "zeus:hestia-brief": "tsx founder-command-center/runtime/memory/buildBrief.ts"
+    "zeus:hestia-brief": "tsx founder-command-center/runtime/memory/buildBrief.ts",
+    "zeus:hestia-sanitize": "tsx founder-command-center/runtime/memory/sanitizeVault.ts"
   },
   "keywords": [],
   "author": "",
