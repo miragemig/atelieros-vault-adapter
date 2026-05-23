@@ -10,7 +10,25 @@ function now() {
   return new Date().toISOString();
 }
 
+function runPolicyCheck() {
+  try {
+    execSync("npm run zeus:policy-check", {
+      cwd: REPO_PATH,
+      encoding: "utf8",
+      stdio: "pipe"
+    });
+    return true;
+  } catch (err: any) {
+    console.error("POLICY CHECK FAILED. Aborting zeus:auto.");
+    console.error(String(err.stdout || err.stderr || err.message));
+    return false;
+  }
+}
+
 function main() {
+  if (!runPolicyCheck()) {
+    process.exit(1);
+  }
   fs.mkdirSync(REPORT_DIR, { recursive: true });
 
   if (!fs.existsSync(QUEUE_PATH)) {
@@ -81,3 +99,4 @@ function main() {
 }
 
 main();
+
