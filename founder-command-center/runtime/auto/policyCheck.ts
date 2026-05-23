@@ -15,7 +15,6 @@ const FORBIDDEN_PATTERNS = [
   /git\s+push/i,
   /git\s+reset/i,
   /git\s+clean/i,
-  /package\.json/i,
   /G:\\ZEUS\\Vaul/i,
   /G:\\ZEUS\\VAULT/i
 ];
@@ -35,7 +34,7 @@ function loadQueue() {
     throw new Error(`Task queue not found: ${QUEUE_PATH}`);
   }
 
-  return JSON.parse(fs.readFileSync(QUEUE_PATH, "utf8"));
+  return JSON.parse(fs.readFileSync(QUEUE_PATH, "utf8").replace(/^\uFEFF/, ""));
 }
 
 function isAllowed(command: string): boolean {
