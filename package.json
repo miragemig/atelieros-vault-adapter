@@ -57,7 +57,8 @@
     "zeus:hestia-write": "tsx founder-command-center/runtime/memory/writeMemory.ts",
     "zeus:handoff": "tsx founder-command-center/runtime/memory/handoff.ts",
     "zeus:hestia-graph": "tsx founder-command-center/runtime/memory/buildGraph.ts",
-    "zeus:vault-normalize": "tsx founder-command-center/runtime/memory/normalizeVault.ts"
+    "zeus:vault-normalize": "tsx founder-command-center/runtime/memory/normalizeVault.ts",
+    "zeus:overnight-safe": "tsx founder-command-center/runtime/overnight/safeOvernight.ts"
   },
   "keywords": [],
   "author": "",
