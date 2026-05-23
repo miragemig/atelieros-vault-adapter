@@ -68,3 +68,7 @@ founder-command-center/zeus-runtime/logs/*.json
 founder-command-center/zeus-runtime/logs/*.json
 
 founder-command-center/runtime/reports/overnight/
+
+founder-command-center/runtime/reports/auto/
+founder-command-center/runtime/reports/planner/
+founder-command-center/runtime/reports/task-generation/
