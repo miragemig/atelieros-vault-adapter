@@ -25,23 +25,58 @@ function collectMarkdownFiles(dir: string): string[] {
   return out;
 }
 
+function buildKeywords(query: string): string[] {
+  const normalized = query.trim();
+
+  const explicitConcepts = [
+    "ZEUS Runtime",
+    "Hestia",
+    "Olympus",
+    "Athena",
+    "Ares",
+    "Themis",
+    "Hephaestus",
+    "Hermes",
+    "Runtime Governance",
+    "Provider Layer",
+    "Retrieval Layer",
+    "Skill Registry",
+    "Execution Policy",
+    "SAFE_OVERNIGHT_MODE"
+  ];
+
+  const foundConcepts = explicitConcepts.filter(c =>
+    normalized.toLowerCase().includes(c.toLowerCase())
+  );
+
+  const tokens = normalized
+    .split(/\s+/)
+    .map(t => t.trim())
+    .filter(t => t.length > 3)
+    .filter(t => !["qual", "papel", "explica", "runtime"].includes(t.toLowerCase()));
+
+  return [...new Set([normalized, ...foundConcepts, ...tokens])];
+}
+
 function retrieveContext(query: string): string {
-  const q = query.toLowerCase();
   const files = collectMarkdownFiles(VAULT_PATH);
   const matches: string[] = [];
+  const keywords = buildKeywords(query);
 
   for (const file of files) {
     const content = fs.readFileSync(file, "utf8");
     const lines = content.split(/\r?\n/);
 
     lines.forEach((line, index) => {
-      if (
-        line.toLowerCase().includes(q) ||
-        file.toLowerCase().includes(q) ||
-        question.toLowerCase().split(/\s+/).some(token =>
-          token.length > 4 && line.toLowerCase().includes(token)
-        )
-      ) {
+      const lowerLine = line.toLowerCase();
+      const lowerFile = file.toLowerCase();
+
+      const hit = keywords.some(k => {
+        const kk = k.toLowerCase();
+        return lowerLine.includes(kk) || lowerFile.includes(kk);
+      });
+
+      if (hit) {
         matches.push([
           `FILE: ${file}`,
           `LINE: ${index + 1}`,
@@ -51,7 +86,7 @@ function retrieveContext(query: string): string {
     });
   }
 
-  return matches.slice(0, 20).join("\n\n");
+  return matches.slice(0, 40).join("\n\n");
 }
 
 function runOllama(prompt: string): string {
@@ -77,12 +112,15 @@ function main() {
 Responde em português europeu.
 
 És o ZEUS Runtime local do Miguel.
-Não inventes.
-Usa apenas o CONTEXTO DO VAULT quando relevante.
-Se o contexto for insuficiente, diz isso claramente.
-Não confundas este ZEUS Runtime com projetos externos chamados Zeus.
 
-CONTEXTO:
+REGRAS:
+- Não inventes.
+- Se o contexto do Vault existir, ele tem prioridade absoluta.
+- Não uses conhecimento genérico sobre projetos chamados Zeus.
+- Se o contexto for insuficiente, diz explicitamente: "Contexto insuficiente no Vault."
+- Responde de forma curta, direta e operacional.
+
+CONTEXTO DO VAULT:
 ${context || "(sem contexto encontrado)"}
 
 PERGUNTA:
@@ -98,7 +136,6 @@ RESPOSTA:
   console.log("");
 
   const answer = runOllama(prompt);
-
   console.log(answer);
 }
 
