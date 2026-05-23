@@ -27,6 +27,67 @@
         "no G:\\ZEUS\\Vaul appears"
       ],
       "report": "G:\\ZEUS\\founder-command-center\\runtime\\reports\\auto\\validate-hestia-search-1779546002638.md"
+    },
+    {
+      "id": "review-vault-normalizer-findings",
+      "status": "pending",
+      "type": "maintenance",
+      "goal": "Review ZEUS vault normalizer findings and identify malformed or noisy vault files",
+      "createdAt": "2026-05-23T15:36:12.384Z",
+      "startedAt": null,
+      "completedAt": null,
+      "allowedFiles": [
+        "founder-command-center/runtime/memory/normalizeVault.ts"
+      ],
+      "commands": [
+        "npm run zeus:vault-normalize"
+      ],
+      "successCriteria": [
+        "command exits with code 0",
+        "normalizer report is produced",
+        "no files are modified",
+        "no deletes are performed"
+      ],
+      "report": null
+    },
+    {
+      "id": "review-working-tree-state",
+      "status": "pending",
+      "type": "git-hygiene",
+      "goal": "Review current git working tree state before further automation",
+      "createdAt": "2026-05-23T15:36:12.385Z",
+      "startedAt": null,
+      "completedAt": null,
+      "allowedFiles": [],
+      "commands": [
+        "npm run zeus:status"
+      ],
+      "successCriteria": [
+        "working tree status is inspected",
+        "no destructive git commands are run"
+      ],
+      "report": null
+    },
+    {
+      "id": "generate-session-handoff",
+      "status": "pending",
+      "type": "handoff",
+      "goal": "Generate ZEUS session handoff for runtime continuity",
+      "createdAt": "2026-05-23T15:36:12.385Z",
+      "startedAt": null,
+      "completedAt": null,
+      "allowedFiles": [
+        "founder-command-center/runtime/memory/handoff.ts"
+      ],
+      "commands": [
+        "npm run zeus:handoff"
+      ],
+      "successCriteria": [
+        "command exits with code 0",
+        "handoff file is generated in ZEUS vault",
+        "no destructive operation is performed"
+      ],
+      "report": null
     }
   ]
 }

@@ -60,7 +60,8 @@
     "zeus:vault-normalize": "tsx founder-command-center/runtime/memory/normalizeVault.ts",
     "zeus:overnight-safe": "tsx founder-command-center/runtime/overnight/safeOvernight.ts",
     "zeus:policy-check": "tsx founder-command-center/runtime/auto/policyCheck.ts",
-    "zeus:plan": "tsx founder-command-center/runtime/auto/taskPlanner.ts"
+    "zeus:plan": "tsx founder-command-center/runtime/auto/taskPlanner.ts",
+    "zeus:generate-tasks": "tsx founder-command-center/runtime/auto/generateTasks.ts"
   },
   "keywords": [],
   "author": "",
