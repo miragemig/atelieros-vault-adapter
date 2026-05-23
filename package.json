@@ -63,7 +63,8 @@
     "zeus:plan": "tsx founder-command-center/runtime/auto/taskPlanner.ts",
     "zeus:generate-tasks": "tsx founder-command-center/runtime/auto/generateTasks.ts",
     "zeus:queue-status": "tsx founder-command-center/runtime/auto/queueStatus.ts",
-    "zeus:vault-materialize": "tsx founder-command-center/runtime/memory/materializeGraph.ts"
+    "zeus:vault-materialize": "tsx founder-command-center/runtime/memory/materializeGraph.ts",
+    "zeus:ask-local": "tsx founder-command-center/runtime/providers/askLocal.ts"
   },
   "keywords": [],
   "author": "",
