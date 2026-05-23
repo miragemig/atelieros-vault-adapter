@@ -1,0 +1,27 @@
+{
+  "id": "1779492687160-test-memory",
+  "createdAt": "2026-05-22T23:31:27.161Z",
+  "message": "test memory",
+  "intent": "general_advice",
+  "continuityQuestion": "Que contexto já existe e deve ser recuperado antes de abrir nova interpretação ou nova frente?",
+  "knownState": [
+    "Git atual: M package-lock.json\n M package.json\n?? docs/\n?? founder-command-center/olympus/olympusBehaviorEngine.ts\n?? founder-command-center/olympus/olympusPersonalities.ts",
+    "Última task conhecida: zeus-health-check",
+    "Último report: pass",
+    "Hermes estado atual: awaiting_voice_approval.",
+    "Último draft: altera-o-ao-pedido-inicial-1779361114062.draft.md.",
+    "Destinatário preparado: cliente@example.com."
+  ],
+  "latestArtifacts": [
+    "Proposal recente: 1779349905426-zeus-estou-indeciso-entre-continuar-o-build-system-ou-fazer-a-ui-delibera.md",
+    "Proposal recente: 1779349844520-zeus-estou-indeciso-entre-continuar-o-build-system-ou-fazer-a-ui-delibera.md",
+    "Proposal recente: 1779349625708-zeus-estou-indeciso-entre-continuar-o-build-system-ou-fazer-a-ui-delibera.md",
+    "Patch candidate recente: fix-zeus-risk-formatting-1779349625787"
+  ],
+  "recalledLessons": [
+    "Não há falhas recentes registadas no roadmap.",
+    "Valor sem continuidade perde-se entre decisões e tentativas.",
+    "A mesma falha tende a repetir-se quando o sistema não a transforma em memória explícita."
+  ],
+  "suggestedMemoryNote": "Intent: general_advice | Mensagem: test memory | Lição central: Valor sem continuidade perde-se entre decisões e tentativas. | Próximo contexto a recuperar: Que contexto já existe e deve ser recuperado antes de abrir nova interpretação ou nova frente?"
+}

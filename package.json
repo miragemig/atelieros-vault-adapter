@@ -58,6 +58,7 @@
     "ajv": "^8.20.0",
     "chokidar": "^5.0.0",
     "googleapis": "^172.0.0",
+    "node": "^24.16.0",
     "playwright-core": "^1.60.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.22.1",
